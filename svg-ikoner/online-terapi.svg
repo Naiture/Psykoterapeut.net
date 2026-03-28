@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" stroke="#2a1f3b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Online therapy / video call illustration -->
+  <!-- Laptop -->
+  <g transform="translate(15, 35)">
+    <!-- Screen -->
+    <rect x="5" y="0" width="65" height="42" rx="4" fill="#f5f0eb" stroke="#2a1f3b"/>
+    <rect x="9" y="4" width="57" height="34" rx="2" fill="#fff" stroke="#2a1f3b" opacity="0.5"/>
+    <!-- Person on screen -->
+    <circle cx="37" cy="17" r="7" fill="#744245" opacity="0.3" stroke="none"/>
+    <path d="M25 34 Q25 26 37 24 Q49 26 49 34" fill="#744245" opacity="0.2" stroke="none"/>
+    <!-- Video icon on screen -->
+    <g transform="translate(52, 28)">
+      <rect x="0" y="0" width="10" height="7" rx="1.5" fill="#744245" opacity="0.5" stroke="none"/>
+      <circle cx="5" cy="3.5" r="1.5" fill="#f5f0eb" stroke="none"/>
+    </g>
+    <!-- Keyboard base -->
+    <path d="M0 42 L75 42 L80 50 L-5 50 Z" fill="#f5f0eb" stroke="#2a1f3b"/>
+    <line x1="30" y1="46" x2="45" y2="46" stroke="#2a1f3b" opacity="0.3"/>
+  </g>
+  <!-- WiFi/connection waves -->
+  <g transform="translate(90, 30)">
+    <path d="M0 15 Q-8 8 0 0" stroke="#744245" stroke-width="1.5" fill="none"/>
+    <path d="M0 15 Q-14 5 0 -5" stroke="#744245" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <path d="M0 15 Q-20 2 0 -10" stroke="#744245" stroke-width="1.5" fill="none" opacity="0.25"/>
+    <circle cx="0" cy="15" r="2.5" fill="#744245" stroke="none"/>
+  </g>
+  <!-- Heart connection -->
+  <g transform="translate(95, 65)">
+    <path d="M0 4 C0 0 -5 -2 -5 2 C-5 6 0 9 0 9 C0 9 5 6 5 2 C5 -2 0 0 0 4Z" fill="#744245" opacity="0.4" stroke="none"/>
+  </g>
+  <!-- Coffee cup (cozy at home) -->
+  <g transform="translate(18, 18)">
+    <path d="M0 5 L0 15 Q0 20 5 20 L10 20 Q15 20 15 15 L15 5 Z" fill="#f5f0eb" stroke="#2a1f3b" stroke-width="1"/>
+    <path d="M15 8 Q20 8 20 12 Q20 16 15 16" stroke="#2a1f3b" stroke-width="1" fill="none"/>
+    <path d="M4 2 Q5 -2 6 2" stroke="#2a1f3b" stroke-width="1" opacity="0.4"/>
+    <path d="M8 0 Q9 -3 10 0" stroke="#2a1f3b" stroke-width="1" opacity="0.4"/>
+  </g>
+  <!-- Decorative stars -->
+  <circle cx="75" cy="20" r="1.5" fill="#2a1f3b"/>
+  <circle cx="50" cy="95" r="1" fill="#2a1f3b"/>
+  <circle cx="108" cy="85" r="1.5" fill="#2a1f3b"/>
+</svg>

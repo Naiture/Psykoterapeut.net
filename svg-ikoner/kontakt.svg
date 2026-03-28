@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" stroke="#2a1f3b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Phone & mail illustration -->
+  <!-- Smartphone -->
+  <g transform="translate(30, 20)">
+    <rect x="0" y="0" width="32" height="55" rx="6" fill="#f5f0eb" stroke="#2a1f3b"/>
+    <line x1="12" y1="48" x2="20" y2="48" stroke="#2a1f3b" opacity="0.4"/>
+    <rect x="4" y="8" width="24" height="32" rx="2" fill="#fff" stroke="#2a1f3b" opacity="0.3"/>
+    <!-- Phone wave lines -->
+    <path d="M36 18 Q42 25 36 32" stroke="#744245" stroke-width="2" fill="none"/>
+    <path d="M40 14 Q50 25 40 36" stroke="#744245" stroke-width="1.5" fill="none" opacity="0.5"/>
+  </g>
+  <!-- Mail envelope -->
+  <g transform="translate(55, 60)">
+    <rect x="0" y="0" width="45" height="30" rx="4" fill="#fff" stroke="#2a1f3b"/>
+    <path d="M0 0 L22.5 16 L45 0" stroke="#744245" stroke-width="2" fill="none"/>
+    <path d="M0 30 L16 16" stroke="#2a1f3b" opacity="0.3" fill="none"/>
+    <path d="M45 30 L29 16" stroke="#2a1f3b" opacity="0.3" fill="none"/>
+  </g>
+  <!-- Chat bubbles -->
+  <g transform="translate(80, 20)">
+    <ellipse cx="0" cy="0" rx="12" ry="8" fill="#744245" stroke="none" opacity="0.15"/>
+    <path d="M-3 6 L0 12 L3 6" fill="#744245" stroke="none" opacity="0.15"/>
+  </g>
+  <!-- Decorative stars -->
+  <circle cx="15" cy="60" r="1.5" fill="#2a1f3b"/>
+  <circle cx="105" cy="50" r="1" fill="#2a1f3b"/>
+  <circle cx="75" cy="15" r="1.5" fill="#2a1f3b"/>
+</svg>

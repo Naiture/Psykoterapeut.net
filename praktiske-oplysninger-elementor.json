@@ -1,0 +1,1294 @@
+[
+  {
+    "id": "pk00001",
+    "elType": "container",
+    "settings": {
+      "flex_direction": "column",
+      "content_width": "full",
+      "padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": true
+      }
+    },
+    "elements": [
+      {
+        "id": "pk00010",
+        "elType": "container",
+        "settings": {
+          "flex_direction": "column",
+          "flex_justify_content": "center",
+          "flex_align_items": "center",
+          "padding": {
+            "unit": "px",
+            "top": "90",
+            "right": "40",
+            "bottom": "60",
+            "left": "40",
+            "isLinked": false
+          },
+          "padding_mobile": {
+            "unit": "px",
+            "top": "70",
+            "right": "20",
+            "bottom": "40",
+            "left": "20",
+            "isLinked": false
+          },
+          "flex_gap": {
+            "column": "20",
+            "row": "20",
+            "isLinked": true,
+            "unit": "px",
+            "size": 20
+          }
+        },
+        "elements": [
+          {
+            "id": "pk00011",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+              "title": "Praktiske <b><i>oplysninger</i></b>",
+              "header_size": "h1",
+              "align": "center",
+              "align_mobile": "center",
+              "content_width": "full",
+              "_animation": "fadeIn",
+              "cmsmasters_ribbon_title": "New"
+            },
+            "elements": []
+          },
+          {
+            "id": "pk00012",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+              "title": "Her finder du alt hvad du har brug for at vide, inden du booker din første samtale.",
+              "header_size": "p",
+              "align": "center",
+              "align_mobile": "center",
+              "content_width": "full",
+              "_animation": "fadeIn",
+              "_animation_delay": 300,
+              "cmsmasters_ribbon_title": "New"
+            },
+            "elements": []
+          }
+        ],
+        "isInner": true
+      },
+      {
+        "id": "pk00020",
+        "elType": "container",
+        "settings": {
+          "padding": {
+            "unit": "px",
+            "top": "0",
+            "right": "40",
+            "bottom": "80",
+            "left": "40",
+            "isLinked": false
+          },
+          "padding_mobile": {
+            "unit": "px",
+            "top": "0",
+            "right": "20",
+            "bottom": "60",
+            "left": "20",
+            "isLinked": false
+          },
+          "flex_gap": {
+            "column": "30",
+            "row": "30",
+            "isLinked": true,
+            "unit": "px",
+            "size": 30
+          }
+        },
+        "elements": [
+          {
+            "id": "pk00021",
+            "elType": "container",
+            "settings": {
+              "container_type": "grid",
+              "presetTitle": "Grid",
+              "presetIcon": "eicon-container-grid",
+              "content_width": "full",
+              "grid_columns_grid": {
+                "unit": "fr",
+                "size": 3,
+                "sizes": []
+              },
+              "grid_columns_grid_tablet": {
+                "unit": "fr",
+                "size": 2,
+                "sizes": []
+              },
+              "grid_columns_grid_mobile": {
+                "unit": "fr",
+                "size": 1,
+                "sizes": []
+              },
+              "grid_rows_grid": {
+                "unit": "fr",
+                "size": 2,
+                "sizes": []
+              },
+              "grid_gap": {
+                "column": "30",
+                "row": "30",
+                "isLinked": true,
+                "unit": "px",
+                "size": 30
+              }
+            },
+            "elements": [
+              {
+                "id": "pk10001",
+                "elType": "widget",
+                "settings": {
+                  "content_width": "full",
+                  "graphic_image": {
+                    "id": 40105,
+                    "url": "https://www.psykoterapeut.net/wp-content/uploads/2026/03/find-vej.svg"
+                  },
+                  "graphic_image_size": "medium",
+                  "title": "Find vej",
+                  "title_tag": "h3",
+                  "description": "L. A. Rings vej 68, 8270 Højbjerg — kun 4,5 km fra Aarhus centrum. Gratis parkering langs vejen. Busser nr. 13, 16 og 18 stopper i nærheden.",
+                  "button": "",
+                  "icon_align": "right",
+                  "wrapper_bg_color_normal": "#FAFAF8",
+                  "wrapper_box_shadow_hover_box_shadow_type": "yes",
+                  "wrapper_box_shadow_hover_box_shadow": {
+                    "horizontal": 0,
+                    "vertical": 2,
+                    "blur": 10,
+                    "spread": 0,
+                    "color": "rgba(0, 0, 0, 0.1)"
+                  },
+                  "wrapper_border_radius": {
+                    "unit": "px",
+                    "top": "30",
+                    "right": "30",
+                    "bottom": "30",
+                    "left": "30",
+                    "isLinked": true
+                  },
+                  "wrapper_padding": {
+                    "unit": "px",
+                    "top": "60",
+                    "right": "30",
+                    "bottom": "60",
+                    "left": "30",
+                    "isLinked": false
+                  },
+                  "graphic_spacing": {
+                    "unit": "px",
+                    "size": 40,
+                    "sizes": []
+                  },
+                  "text_padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "title_typography_typography": "custom",
+                  "title_typography_font_family": "Literata Local",
+                  "title_typography_font_size": {
+                    "unit": "px",
+                    "size": "24",
+                    "sizes": []
+                  },
+                  "title_typography_font_size_tablet": {
+                    "unit": "px",
+                    "size": 20,
+                    "sizes": []
+                  },
+                  "title_typography_font_size_mobile": {
+                    "unit": "px",
+                    "size": 18,
+                    "sizes": []
+                  },
+                  "title_typography_font_weight": "300",
+                  "title_typography_text_transform": "none",
+                  "title_typography_font_style": "normal",
+                  "title_typography_text_decoration": "none",
+                  "title_typography_line_height": {
+                    "unit": "em",
+                    "size": "1.25",
+                    "sizes": []
+                  },
+                  "title_typography_letter_spacing": {
+                    "unit": "px",
+                    "size": "0",
+                    "sizes": []
+                  },
+                  "title_typography_word_spacing": {
+                    "unit": "px",
+                    "size": "0",
+                    "sizes": []
+                  },
+                  "title_spacing": {
+                    "unit": "px",
+                    "size": "",
+                    "sizes": []
+                  },
+                  "button_background_color_normal": "#02010100",
+                  "button_border_radius": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "button_background_color_hover": "#02010100",
+                  "button_shadow_text_hover_text_shadow": {
+                    "horizontal": 0,
+                    "vertical": 0,
+                    "blur": 1,
+                    "color": "rgba(0,0,0,0.3)"
+                  },
+                  "border_button_border": "none",
+                  "button_padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "button_icon_size": {
+                    "unit": "px",
+                    "size": 20,
+                    "sizes": []
+                  },
+                  "button_icon_hover_color": "#FCDA98",
+                  "cmsmasters_ribbon_title": "New",
+                  "__globals__": {
+                    "button_text_color_hover": "globals/colors?id=tertiary",
+                    "button_icon_hover_color": "globals/colors?id=tertiary",
+                    "wrapper_bg_color_normal": "globals/colors?id=alternate",
+                    "title_typography_typography": "globals/typography?id=0b7ec5e",
+                    "button_icon_color": "globals/colors?id=secondary",
+                    "button_text_color_normal": "globals/colors?id=secondary",
+                    "title_color": "globals/colors?id=secondary",
+                    "title_color_hover": "globals/colors?id=tertiary",
+                    "wrapper_bg_color_hover": "globals/colors?id=background"
+                  },
+                  "text_vertical_position": "bottom",
+                  "decorations": [],
+                  "_flex_align_self": "center",
+                  "cms_effect_type": "transform",
+                  "cms_transform_scale_toggle_hover": "yes",
+                  "cms_transform_scale_hover": {
+                    "unit": "x",
+                    "size": 1.01,
+                    "sizes": []
+                  },
+                  "cms_transform_duration": {
+                    "unit": "px",
+                    "size": 0.3,
+                    "sizes": []
+                  }
+                },
+                "elements": [],
+                "widgetType": "cmsmasters-featured-box"
+              },
+              {
+                "id": "pk10002",
+                "elType": "widget",
+                "settings": {
+                  "content_width": "full",
+                  "graphic_image": {
+                    "id": 40106,
+                    "url": "https://www.psykoterapeut.net/wp-content/uploads/2026/03/priser.svg"
+                  },
+                  "graphic_image_size": "medium",
+                  "title": "Priser og betaling",
+                  "title_tag": "h3",
+                  "description": "Den indledende telefonsamtale er <strong>helt gratis</strong> og uforpligtende. Individuel samtale: 750 kr. (60 min.) / Parterapi: 1.150 kr. (90 min.) — Betaling kontant eller MobilePay.",
+                  "button": "",
+                  "icon_align": "right",
+                  "wrapper_bg_color_normal": "#FAFAF8",
+                  "wrapper_box_shadow_hover_box_shadow_type": "yes",
+                  "wrapper_box_shadow_hover_box_shadow": {
+                    "horizontal": 0,
+                    "vertical": 2,
+                    "blur": 10,
+                    "spread": 0,
+                    "color": "rgba(0, 0, 0, 0.1)"
+                  },
+                  "wrapper_border_radius": {
+                    "unit": "px",
+                    "top": "30",
+                    "right": "30",
+                    "bottom": "30",
+                    "left": "30",
+                    "isLinked": true
+                  },
+                  "wrapper_padding": {
+                    "unit": "px",
+                    "top": "60",
+                    "right": "30",
+                    "bottom": "60",
+                    "left": "30",
+                    "isLinked": false
+                  },
+                  "graphic_spacing": {
+                    "unit": "px",
+                    "size": 40,
+                    "sizes": []
+                  },
+                  "text_padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "title_typography_typography": "custom",
+                  "title_typography_font_family": "Literata Local",
+                  "title_typography_font_size": {
+                    "unit": "px",
+                    "size": "24",
+                    "sizes": []
+                  },
+                  "title_typography_font_size_tablet": {
+                    "unit": "px",
+                    "size": 20,
+                    "sizes": []
+                  },
+                  "title_typography_font_size_mobile": {
+                    "unit": "px",
+                    "size": 18,
+                    "sizes": []
+                  },
+                  "title_typography_font_weight": "300",
+                  "title_typography_text_transform": "none",
+                  "title_typography_font_style": "normal",
+                  "title_typography_text_decoration": "none",
+                  "title_typography_line_height": {
+                    "unit": "em",
+                    "size": "1.25",
+                    "sizes": []
+                  },
+                  "title_typography_letter_spacing": {
+                    "unit": "px",
+                    "size": "0",
+                    "sizes": []
+                  },
+                  "title_typography_word_spacing": {
+                    "unit": "px",
+                    "size": "0",
+                    "sizes": []
+                  },
+                  "title_spacing": {
+                    "unit": "px",
+                    "size": "",
+                    "sizes": []
+                  },
+                  "button_background_color_normal": "#02010100",
+                  "button_border_radius": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "button_background_color_hover": "#02010100",
+                  "button_shadow_text_hover_text_shadow": {
+                    "horizontal": 0,
+                    "vertical": 0,
+                    "blur": 1,
+                    "color": "rgba(0,0,0,0.3)"
+                  },
+                  "border_button_border": "none",
+                  "button_padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "button_icon_size": {
+                    "unit": "px",
+                    "size": 20,
+                    "sizes": []
+                  },
+                  "button_icon_hover_color": "#FCDA98",
+                  "cmsmasters_ribbon_title": "New",
+                  "__globals__": {
+                    "button_text_color_hover": "globals/colors?id=tertiary",
+                    "button_icon_hover_color": "globals/colors?id=tertiary",
+                    "wrapper_bg_color_normal": "globals/colors?id=alternate",
+                    "title_typography_typography": "globals/typography?id=0b7ec5e",
+                    "button_icon_color": "globals/colors?id=secondary",
+                    "button_text_color_normal": "globals/colors?id=secondary",
+                    "title_color": "globals/colors?id=secondary",
+                    "title_color_hover": "globals/colors?id=tertiary",
+                    "wrapper_bg_color_hover": "globals/colors?id=background"
+                  },
+                  "text_vertical_position": "bottom",
+                  "decorations": [],
+                  "_flex_align_self": "center",
+                  "cms_effect_type": "transform",
+                  "cms_transform_scale_toggle_hover": "yes",
+                  "cms_transform_scale_hover": {
+                    "unit": "x",
+                    "size": 1.01,
+                    "sizes": []
+                  },
+                  "cms_transform_duration": {
+                    "unit": "px",
+                    "size": 0.3,
+                    "sizes": []
+                  }
+                },
+                "elements": [],
+                "widgetType": "cmsmasters-featured-box"
+              },
+              {
+                "id": "pk10003",
+                "elType": "widget",
+                "settings": {
+                  "content_width": "full",
+                  "graphic_image": {
+                    "id": 40107,
+                    "url": "https://www.psykoterapeut.net/wp-content/uploads/2026/03/kontakt.svg"
+                  },
+                  "graphic_image_size": "medium",
+                  "title": "Kontakt",
+                  "title_tag": "h3",
+                  "description": "Tlf: <a href=\"tel:+4529930110\">29930110</a> / Mail: <a href=\"mailto:Inger@psykoterapeut.net\">Inger@psykoterapeut.net</a> — Bestilling af tid på hverdage kl. 8-17, eller skriv en SMS.",
+                  "button": "",
+                  "icon_align": "right",
+                  "wrapper_bg_color_normal": "#FAFAF8",
+                  "wrapper_box_shadow_hover_box_shadow_type": "yes",
+                  "wrapper_box_shadow_hover_box_shadow": {
+                    "horizontal": 0,
+                    "vertical": 2,
+                    "blur": 10,
+                    "spread": 0,
+                    "color": "rgba(0, 0, 0, 0.1)"
+                  },
+                  "wrapper_border_radius": {
+                    "unit": "px",
+                    "top": "30",
+                    "right": "30",
+                    "bottom": "30",
+                    "left": "30",
+                    "isLinked": true
+                  },
+                  "wrapper_padding": {
+                    "unit": "px",
+                    "top": "60",
+                    "right": "30",
+                    "bottom": "60",
+                    "left": "30",
+                    "isLinked": false
+                  },
+                  "graphic_spacing": {
+                    "unit": "px",
+                    "size": 40,
+                    "sizes": []
+                  },
+                  "text_padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "title_typography_typography": "custom",
+                  "title_typography_font_family": "Literata Local",
+                  "title_typography_font_size": {
+                    "unit": "px",
+                    "size": "24",
+                    "sizes": []
+                  },
+                  "title_typography_font_size_tablet": {
+                    "unit": "px",
+                    "size": 20,
+                    "sizes": []
+                  },
+                  "title_typography_font_size_mobile": {
+                    "unit": "px",
+                    "size": 18,
+                    "sizes": []
+                  },
+                  "title_typography_font_weight": "300",
+                  "title_typography_text_transform": "none",
+                  "title_typography_font_style": "normal",
+                  "title_typography_text_decoration": "none",
+                  "title_typography_line_height": {
+                    "unit": "em",
+                    "size": "1.25",
+                    "sizes": []
+                  },
+                  "title_typography_letter_spacing": {
+                    "unit": "px",
+                    "size": "0",
+                    "sizes": []
+                  },
+                  "title_typography_word_spacing": {
+                    "unit": "px",
+                    "size": "0",
+                    "sizes": []
+                  },
+                  "title_spacing": {
+                    "unit": "px",
+                    "size": "",
+                    "sizes": []
+                  },
+                  "button_background_color_normal": "#02010100",
+                  "button_border_radius": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "button_background_color_hover": "#02010100",
+                  "button_shadow_text_hover_text_shadow": {
+                    "horizontal": 0,
+                    "vertical": 0,
+                    "blur": 1,
+                    "color": "rgba(0,0,0,0.3)"
+                  },
+                  "border_button_border": "none",
+                  "button_padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "button_icon_size": {
+                    "unit": "px",
+                    "size": 20,
+                    "sizes": []
+                  },
+                  "button_icon_hover_color": "#FCDA98",
+                  "cmsmasters_ribbon_title": "New",
+                  "__globals__": {
+                    "button_text_color_hover": "globals/colors?id=tertiary",
+                    "button_icon_hover_color": "globals/colors?id=tertiary",
+                    "wrapper_bg_color_normal": "globals/colors?id=alternate",
+                    "title_typography_typography": "globals/typography?id=0b7ec5e",
+                    "button_icon_color": "globals/colors?id=secondary",
+                    "button_text_color_normal": "globals/colors?id=secondary",
+                    "title_color": "globals/colors?id=secondary",
+                    "title_color_hover": "globals/colors?id=tertiary",
+                    "wrapper_bg_color_hover": "globals/colors?id=background"
+                  },
+                  "text_vertical_position": "bottom",
+                  "decorations": [],
+                  "_flex_align_self": "center",
+                  "cms_effect_type": "transform",
+                  "cms_transform_scale_toggle_hover": "yes",
+                  "cms_transform_scale_hover": {
+                    "unit": "x",
+                    "size": 1.01,
+                    "sizes": []
+                  },
+                  "cms_transform_duration": {
+                    "unit": "px",
+                    "size": 0.3,
+                    "sizes": []
+                  }
+                },
+                "elements": [],
+                "widgetType": "cmsmasters-featured-box"
+              },
+              {
+                "id": "pk10004",
+                "elType": "widget",
+                "settings": {
+                  "content_width": "full",
+                  "graphic_image": {
+                    "id": 40108,
+                    "url": "https://www.psykoterapeut.net/wp-content/uploads/2026/03/tider.svg"
+                  },
+                  "graphic_image_size": "medium",
+                  "title": "Tider",
+                  "title_tag": "h3",
+                  "description": "Jeg tilbyder tider mellem kl. 9.00 og 17.30. Tider udenfor denne ramme kan i særlige tilfælde aftales. Aflysning skal ske senest 24 timer før — ellers fuld betaling.",
+                  "button": "",
+                  "icon_align": "right",
+                  "wrapper_bg_color_normal": "#FAFAF8",
+                  "wrapper_box_shadow_hover_box_shadow_type": "yes",
+                  "wrapper_box_shadow_hover_box_shadow": {
+                    "horizontal": 0,
+                    "vertical": 2,
+                    "blur": 10,
+                    "spread": 0,
+                    "color": "rgba(0, 0, 0, 0.1)"
+                  },
+                  "wrapper_border_radius": {
+                    "unit": "px",
+                    "top": "30",
+                    "right": "30",
+                    "bottom": "30",
+                    "left": "30",
+                    "isLinked": true
+                  },
+                  "wrapper_padding": {
+                    "unit": "px",
+                    "top": "60",
+                    "right": "30",
+                    "bottom": "60",
+                    "left": "30",
+                    "isLinked": false
+                  },
+                  "graphic_spacing": {
+                    "unit": "px",
+                    "size": 40,
+                    "sizes": []
+                  },
+                  "text_padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "title_typography_typography": "custom",
+                  "title_typography_font_family": "Literata Local",
+                  "title_typography_font_size": {
+                    "unit": "px",
+                    "size": "24",
+                    "sizes": []
+                  },
+                  "title_typography_font_size_tablet": {
+                    "unit": "px",
+                    "size": 20,
+                    "sizes": []
+                  },
+                  "title_typography_font_size_mobile": {
+                    "unit": "px",
+                    "size": 18,
+                    "sizes": []
+                  },
+                  "title_typography_font_weight": "300",
+                  "title_typography_text_transform": "none",
+                  "title_typography_font_style": "normal",
+                  "title_typography_text_decoration": "none",
+                  "title_typography_line_height": {
+                    "unit": "em",
+                    "size": "1.25",
+                    "sizes": []
+                  },
+                  "title_typography_letter_spacing": {
+                    "unit": "px",
+                    "size": "0",
+                    "sizes": []
+                  },
+                  "title_typography_word_spacing": {
+                    "unit": "px",
+                    "size": "0",
+                    "sizes": []
+                  },
+                  "title_spacing": {
+                    "unit": "px",
+                    "size": "",
+                    "sizes": []
+                  },
+                  "button_background_color_normal": "#02010100",
+                  "button_border_radius": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "button_background_color_hover": "#02010100",
+                  "button_shadow_text_hover_text_shadow": {
+                    "horizontal": 0,
+                    "vertical": 0,
+                    "blur": 1,
+                    "color": "rgba(0,0,0,0.3)"
+                  },
+                  "border_button_border": "none",
+                  "button_padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "button_icon_size": {
+                    "unit": "px",
+                    "size": 20,
+                    "sizes": []
+                  },
+                  "button_icon_hover_color": "#FCDA98",
+                  "cmsmasters_ribbon_title": "New",
+                  "__globals__": {
+                    "button_text_color_hover": "globals/colors?id=tertiary",
+                    "button_icon_hover_color": "globals/colors?id=tertiary",
+                    "wrapper_bg_color_normal": "globals/colors?id=alternate",
+                    "title_typography_typography": "globals/typography?id=0b7ec5e",
+                    "button_icon_color": "globals/colors?id=secondary",
+                    "button_text_color_normal": "globals/colors?id=secondary",
+                    "title_color": "globals/colors?id=secondary",
+                    "title_color_hover": "globals/colors?id=tertiary",
+                    "wrapper_bg_color_hover": "globals/colors?id=background"
+                  },
+                  "text_vertical_position": "bottom",
+                  "decorations": [],
+                  "_flex_align_self": "center",
+                  "cms_effect_type": "transform",
+                  "cms_transform_scale_toggle_hover": "yes",
+                  "cms_transform_scale_hover": {
+                    "unit": "x",
+                    "size": 1.01,
+                    "sizes": []
+                  },
+                  "cms_transform_duration": {
+                    "unit": "px",
+                    "size": 0.3,
+                    "sizes": []
+                  }
+                },
+                "elements": [],
+                "widgetType": "cmsmasters-featured-box"
+              },
+              {
+                "id": "pk10005",
+                "elType": "widget",
+                "settings": {
+                  "content_width": "full",
+                  "graphic_image": {
+                    "id": 40109,
+                    "url": "https://www.psykoterapeut.net/wp-content/uploads/2026/03/faciliteter.svg"
+                  },
+                  "graphic_image_size": "medium",
+                  "title": "Faciliteter",
+                  "title_tag": "h3",
+                  "description": "Min praksis ligger i det rolige Kragelundskvarter i Højbjerg, nær Aarhus. Terapien foregår i hyggelige, private rammer med egen indgang og uforstyrrede forhold.",
+                  "button": "",
+                  "icon_align": "right",
+                  "wrapper_bg_color_normal": "#FAFAF8",
+                  "wrapper_box_shadow_hover_box_shadow_type": "yes",
+                  "wrapper_box_shadow_hover_box_shadow": {
+                    "horizontal": 0,
+                    "vertical": 2,
+                    "blur": 10,
+                    "spread": 0,
+                    "color": "rgba(0, 0, 0, 0.1)"
+                  },
+                  "wrapper_border_radius": {
+                    "unit": "px",
+                    "top": "30",
+                    "right": "30",
+                    "bottom": "30",
+                    "left": "30",
+                    "isLinked": true
+                  },
+                  "wrapper_padding": {
+                    "unit": "px",
+                    "top": "60",
+                    "right": "30",
+                    "bottom": "60",
+                    "left": "30",
+                    "isLinked": false
+                  },
+                  "graphic_spacing": {
+                    "unit": "px",
+                    "size": 40,
+                    "sizes": []
+                  },
+                  "text_padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "title_typography_typography": "custom",
+                  "title_typography_font_family": "Literata Local",
+                  "title_typography_font_size": {
+                    "unit": "px",
+                    "size": "24",
+                    "sizes": []
+                  },
+                  "title_typography_font_size_tablet": {
+                    "unit": "px",
+                    "size": 20,
+                    "sizes": []
+                  },
+                  "title_typography_font_size_mobile": {
+                    "unit": "px",
+                    "size": 18,
+                    "sizes": []
+                  },
+                  "title_typography_font_weight": "300",
+                  "title_typography_text_transform": "none",
+                  "title_typography_font_style": "normal",
+                  "title_typography_text_decoration": "none",
+                  "title_typography_line_height": {
+                    "unit": "em",
+                    "size": "1.25",
+                    "sizes": []
+                  },
+                  "title_typography_letter_spacing": {
+                    "unit": "px",
+                    "size": "0",
+                    "sizes": []
+                  },
+                  "title_typography_word_spacing": {
+                    "unit": "px",
+                    "size": "0",
+                    "sizes": []
+                  },
+                  "title_spacing": {
+                    "unit": "px",
+                    "size": "",
+                    "sizes": []
+                  },
+                  "button_background_color_normal": "#02010100",
+                  "button_border_radius": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "button_background_color_hover": "#02010100",
+                  "button_shadow_text_hover_text_shadow": {
+                    "horizontal": 0,
+                    "vertical": 0,
+                    "blur": 1,
+                    "color": "rgba(0,0,0,0.3)"
+                  },
+                  "border_button_border": "none",
+                  "button_padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "button_icon_size": {
+                    "unit": "px",
+                    "size": 20,
+                    "sizes": []
+                  },
+                  "button_icon_hover_color": "#FCDA98",
+                  "cmsmasters_ribbon_title": "New",
+                  "__globals__": {
+                    "button_text_color_hover": "globals/colors?id=tertiary",
+                    "button_icon_hover_color": "globals/colors?id=tertiary",
+                    "wrapper_bg_color_normal": "globals/colors?id=alternate",
+                    "title_typography_typography": "globals/typography?id=0b7ec5e",
+                    "button_icon_color": "globals/colors?id=secondary",
+                    "button_text_color_normal": "globals/colors?id=secondary",
+                    "title_color": "globals/colors?id=secondary",
+                    "title_color_hover": "globals/colors?id=tertiary",
+                    "wrapper_bg_color_hover": "globals/colors?id=background"
+                  },
+                  "text_vertical_position": "bottom",
+                  "decorations": [],
+                  "_flex_align_self": "center",
+                  "cms_effect_type": "transform",
+                  "cms_transform_scale_toggle_hover": "yes",
+                  "cms_transform_scale_hover": {
+                    "unit": "x",
+                    "size": 1.01,
+                    "sizes": []
+                  },
+                  "cms_transform_duration": {
+                    "unit": "px",
+                    "size": 0.3,
+                    "sizes": []
+                  }
+                },
+                "elements": [],
+                "widgetType": "cmsmasters-featured-box"
+              },
+              {
+                "id": "pk10006",
+                "elType": "widget",
+                "settings": {
+                  "content_width": "full",
+                  "graphic_image": {
+                    "id": 40110,
+                    "url": "https://www.psykoterapeut.net/wp-content/uploads/2026/03/online-terapi.svg"
+                  },
+                  "graphic_image_size": "medium",
+                  "title": "Online terapi",
+                  "title_tag": "h3",
+                  "description": "Bor du langt fra Aarhus, eller foretrækker du at sidde hjemme? Jeg tilbyder også online sessioner via video — med præcis samme nærvær, fordybelse og fortrolighed som ved fysisk fremmøde.",
+                  "button": "",
+                  "icon_align": "right",
+                  "wrapper_bg_color_normal": "#FAFAF8",
+                  "wrapper_box_shadow_hover_box_shadow_type": "yes",
+                  "wrapper_box_shadow_hover_box_shadow": {
+                    "horizontal": 0,
+                    "vertical": 2,
+                    "blur": 10,
+                    "spread": 0,
+                    "color": "rgba(0, 0, 0, 0.1)"
+                  },
+                  "wrapper_border_radius": {
+                    "unit": "px",
+                    "top": "30",
+                    "right": "30",
+                    "bottom": "30",
+                    "left": "30",
+                    "isLinked": true
+                  },
+                  "wrapper_padding": {
+                    "unit": "px",
+                    "top": "60",
+                    "right": "30",
+                    "bottom": "60",
+                    "left": "30",
+                    "isLinked": false
+                  },
+                  "graphic_spacing": {
+                    "unit": "px",
+                    "size": 40,
+                    "sizes": []
+                  },
+                  "text_padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "title_typography_typography": "custom",
+                  "title_typography_font_family": "Literata Local",
+                  "title_typography_font_size": {
+                    "unit": "px",
+                    "size": "24",
+                    "sizes": []
+                  },
+                  "title_typography_font_size_tablet": {
+                    "unit": "px",
+                    "size": 20,
+                    "sizes": []
+                  },
+                  "title_typography_font_size_mobile": {
+                    "unit": "px",
+                    "size": 18,
+                    "sizes": []
+                  },
+                  "title_typography_font_weight": "300",
+                  "title_typography_text_transform": "none",
+                  "title_typography_font_style": "normal",
+                  "title_typography_text_decoration": "none",
+                  "title_typography_line_height": {
+                    "unit": "em",
+                    "size": "1.25",
+                    "sizes": []
+                  },
+                  "title_typography_letter_spacing": {
+                    "unit": "px",
+                    "size": "0",
+                    "sizes": []
+                  },
+                  "title_typography_word_spacing": {
+                    "unit": "px",
+                    "size": "0",
+                    "sizes": []
+                  },
+                  "title_spacing": {
+                    "unit": "px",
+                    "size": "",
+                    "sizes": []
+                  },
+                  "button_background_color_normal": "#02010100",
+                  "button_border_radius": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "button_background_color_hover": "#02010100",
+                  "button_shadow_text_hover_text_shadow": {
+                    "horizontal": 0,
+                    "vertical": 0,
+                    "blur": 1,
+                    "color": "rgba(0,0,0,0.3)"
+                  },
+                  "border_button_border": "none",
+                  "button_padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "button_icon_size": {
+                    "unit": "px",
+                    "size": 20,
+                    "sizes": []
+                  },
+                  "button_icon_hover_color": "#FCDA98",
+                  "cmsmasters_ribbon_title": "New",
+                  "__globals__": {
+                    "button_text_color_hover": "globals/colors?id=tertiary",
+                    "button_icon_hover_color": "globals/colors?id=tertiary",
+                    "wrapper_bg_color_normal": "globals/colors?id=alternate",
+                    "title_typography_typography": "globals/typography?id=0b7ec5e",
+                    "button_icon_color": "globals/colors?id=secondary",
+                    "button_text_color_normal": "globals/colors?id=secondary",
+                    "title_color": "globals/colors?id=secondary",
+                    "title_color_hover": "globals/colors?id=tertiary",
+                    "wrapper_bg_color_hover": "globals/colors?id=background"
+                  },
+                  "text_vertical_position": "bottom",
+                  "decorations": [],
+                  "_flex_align_self": "center",
+                  "cms_effect_type": "transform",
+                  "cms_transform_scale_toggle_hover": "yes",
+                  "cms_transform_scale_hover": {
+                    "unit": "x",
+                    "size": 1.01,
+                    "sizes": []
+                  },
+                  "cms_transform_duration": {
+                    "unit": "px",
+                    "size": 0.3,
+                    "sizes": []
+                  }
+                },
+                "elements": [],
+                "widgetType": "cmsmasters-featured-box"
+              }
+            ],
+            "isInner": true
+          }
+        ],
+        "isInner": true
+      },
+      {
+        "id": "pk00030",
+        "elType": "container",
+        "settings": {
+          "flex_direction": "column",
+          "flex_justify_content": "center",
+          "flex_align_items": "center",
+          "background_background": "classic",
+          "background_color": "#744245",
+          "padding": {
+            "unit": "px",
+            "top": "80",
+            "right": "40",
+            "bottom": "80",
+            "left": "40",
+            "isLinked": false
+          },
+          "padding_mobile": {
+            "unit": "px",
+            "top": "60",
+            "right": "20",
+            "bottom": "60",
+            "left": "20",
+            "isLinked": false
+          },
+          "flex_gap": {
+            "column": "20",
+            "row": "20",
+            "isLinked": true,
+            "unit": "px",
+            "size": 20
+          }
+        },
+        "elements": [
+          {
+            "id": "pk00031",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+              "title": "Klar til at <b><i>tage det første skridt?</i></b>",
+              "header_size": "h2",
+              "align": "center",
+              "title_color": "#FFFFFF",
+              "content_width": "full",
+              "_animation": "fadeIn",
+              "cmsmasters_ribbon_title": "New"
+            },
+            "elements": []
+          },
+          {
+            "id": "pk00032",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+              "title": "Book en gratis og uforpligtende telefonsamtale — så tager vi den derfra.",
+              "header_size": "p",
+              "align": "center",
+              "title_color": "rgba(255,255,255,0.85)",
+              "content_width": "full",
+              "cmsmasters_ribbon_title": "New"
+            },
+            "elements": []
+          },
+          {
+            "id": "pk00033",
+            "elType": "container",
+            "settings": {
+              "flex_direction": "row",
+              "flex_justify_content": "center",
+              "flex_align_items": "center",
+              "flex_gap": {
+                "column": "20",
+                "row": "20",
+                "isLinked": true,
+                "unit": "px",
+                "size": 20
+              },
+              "flex_wrap": "wrap",
+              "padding": {
+                "unit": "px",
+                "top": "20",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": false
+              }
+            },
+            "elements": [
+              {
+                "id": "pk00034",
+                "elType": "widget",
+                "widgetType": "cmsmasters-button",
+                "settings": {
+                  "text": "Book gratis møde",
+                  "link": {
+                    "url": "/book-samtale/",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  },
+                  "selected_icon": {
+                    "value": "cmsmsdemo-icon- cmsms-demo-icon-arrow-curved",
+                    "library": "Local-Icons"
+                  },
+                  "icon_align": "right",
+                  "button_text_color": "#744245",
+                  "background_color": "#FFFFFF",
+                  "button_border_color": "#FFFFFF",
+                  "button_border_radius": {
+                    "unit": "px",
+                    "top": "30",
+                    "right": "30",
+                    "bottom": "30",
+                    "left": "30",
+                    "isLinked": true
+                  },
+                  "hover_color": "#744245",
+                  "button_background_hover_color": "#F4EBE4",
+                  "button_hover_border_color": "#F4EBE4",
+                  "cmsmasters_ribbon_title": "New"
+                },
+                "elements": []
+              },
+              {
+                "id": "pk00035",
+                "elType": "widget",
+                "widgetType": "cmsmasters-featured-box",
+                "settings": {
+                  "alignment": "left",
+                  "title": "eller ring direkte:",
+                  "title_tag": "div",
+                  "description": "29930110",
+                  "link": {
+                    "url": "tel:+4529930110",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  },
+                  "link_type": "link-box",
+                  "graphic_image": {
+                    "url": "",
+                    "id": "",
+                    "size": ""
+                  },
+                  "wrapper_border_border": "solid",
+                  "wrapper_border_width": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": false
+                  },
+                  "text_padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                  },
+                  "title_spacing": {
+                    "unit": "px",
+                    "size": 2,
+                    "sizes": []
+                  },
+                  "title_color": "rgba(255,255,255,0.6)",
+                  "description_color": "#FFFFFF",
+                  "_padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "30",
+                    "isLinked": false
+                  },
+                  "_element_width": "initial",
+                  "_border_border": "solid",
+                  "_border_width": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "1",
+                    "isLinked": false
+                  },
+                  "_border_color": "rgba(255,255,255,0.3)",
+                  "cmsmasters_ribbon_title": "New",
+                  "decorations": [],
+                  "button": "Click Here"
+                },
+                "elements": []
+              }
+            ],
+            "isInner": true
+          }
+        ],
+        "isInner": true
+      }
+    ],
+    "isInner": false
+  }
+]

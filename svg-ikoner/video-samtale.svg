@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="#744245" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Laptop base -->
+  <rect x="30" y="50" width="140" height="95" rx="8" fill="#F4EBE4"/>
+  <rect x="30" y="50" width="140" height="95" rx="8"/>
+  <!-- Screen content - person silhouette -->
+  <circle cx="100" cy="82" r="14" fill="none"/>
+  <path d="M75 120 C75 105 85 95 100 95 C115 95 125 105 125 120"/>
+  <!-- Camera dot -->
+  <circle cx="100" cy="55" r="3" fill="#744245"/>
+  <!-- Laptop keyboard -->
+  <path d="M20 145 L30 145 L30 145 L170 145 L180 145" />
+  <rect x="20" y="145" width="160" height="10" rx="3" fill="#F4EBE4"/>
+  <rect x="20" y="145" width="160" height="10" rx="3"/>
+  <!-- Connection waves -->
+  <path d="M155 65 C162 65 168 70 168 78" fill="none" opacity="0.5"/>
+  <path d="M155 58 C168 58 178 68 178 82" fill="none" opacity="0.3"/>
+  <!-- Heart -->
+  <path d="M90 170 C90 165 95 162 100 167 C105 162 110 165 110 170 C110 176 100 182 100 182 C100 182 90 176 90 170Z" fill="#744245" stroke="none" opacity="0.6"/>
+</svg>

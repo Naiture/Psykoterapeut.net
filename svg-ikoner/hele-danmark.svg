@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="#744245" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Simplified Denmark outline -->
+  <path d="M85 30 C88 35 92 38 90 45 C88 52 82 55 80 62 C78 68 82 72 85 78 C88 84 84 90 80 95 C76 100 78 108 82 112 C86 116 90 122 88 128 C86 134 82 138 80 144 C78 148 80 152 84 155 C88 158 92 162 90 168 C88 172 85 175 85 175" fill="#F4EBE4"/>
+  <path d="M85 30 C88 35 92 38 90 45 C88 52 82 55 80 62 C78 68 82 72 85 78 C88 84 84 90 80 95 C76 100 78 108 82 112 C86 116 90 122 88 128 C86 134 82 138 80 144 C78 148 80 152 84 155 C88 158 92 162 90 168"/>
+  <!-- Islands -->
+  <ellipse cx="110" cy="100" rx="18" ry="12" fill="#F4EBE4"/>
+  <ellipse cx="110" cy="100" rx="18" ry="12"/>
+  <ellipse cx="120" cy="130" rx="12" ry="8" fill="#F4EBE4"/>
+  <ellipse cx="120" cy="130" rx="12" ry="8"/>
+  <!-- Location pin on Aarhus -->
+  <circle cx="95" cy="75" r="5" fill="#744245" stroke="none"/>
+  <path d="M95 70 C95 70 102 62 102 58 C102 54 99 51 95 51 C91 51 88 54 88 58 C88 62 95 70 95 70Z" fill="#744245" stroke="none"/>
+  <!-- Connection lines radiating out -->
+  <line x1="95" y1="75" x2="60" y2="50" opacity="0.3" stroke-dasharray="3,3"/>
+  <line x1="95" y1="75" x2="130" y2="55" opacity="0.3" stroke-dasharray="3,3"/>
+  <line x1="95" y1="75" x2="140" y2="100" opacity="0.3" stroke-dasharray="3,3"/>
+  <line x1="95" y1="75" x2="130" y2="140" opacity="0.3" stroke-dasharray="3,3"/>
+  <line x1="95" y1="75" x2="70" y2="150" opacity="0.3" stroke-dasharray="3,3"/>
+  <!-- Small dots at endpoints -->
+  <circle cx="60" cy="50" r="3" fill="#744245" opacity="0.4"/>
+  <circle cx="130" cy="55" r="3" fill="#744245" opacity="0.4"/>
+  <circle cx="140" cy="100" r="3" fill="#744245" opacity="0.4"/>
+  <circle cx="130" cy="140" r="3" fill="#744245" opacity="0.4"/>
+  <circle cx="70" cy="150" r="3" fill="#744245" opacity="0.4"/>
+</svg>

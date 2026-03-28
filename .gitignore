@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# MCP config (indeholder credentials)
+.mcp.json
+
+# Zip-filer (kan rebuildes)
+*.zip
+
+# Theme backup (for stort til Git)
+themeforest-kjR9EXNk-mental-care-therapy-counseling-psychologist-wordpress-theme/
+
+# Temporary/old files
+depression-page.html
+online-terapi-media.json

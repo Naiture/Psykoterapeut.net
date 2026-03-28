@@ -1,0 +1,906 @@
+[
+  {
+    "id": "ot-hero",
+    "elType": "container",
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "flex_align_items": "center",
+      "flex_justify_content": "center",
+      "background_background": "classic",
+      "background_color": "#F4EBE4",
+      "padding": {
+        "unit": "px",
+        "top": "100",
+        "right": "30",
+        "bottom": "80",
+        "left": "30",
+        "isLinked": false
+      },
+      "padding_mobile": {
+        "unit": "px",
+        "top": "60",
+        "right": "20",
+        "bottom": "50",
+        "left": "20",
+        "isLinked": false
+      }
+    },
+    "elements": [
+      {
+        "id": "ot-hero-inner",
+        "elType": "container",
+        "settings": {
+          "content_width": "boxed",
+          "flex_direction": "column",
+          "flex_align_items": "center",
+          "flex_gap": {"column": "20", "row": "20", "unit": "px", "isLinked": true},
+          "max_width": {"unit": "px", "size": 760}
+        },
+        "elements": [
+          {
+            "id": "ot-hero-tag",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+              "title": "ONLINE TERAPI",
+              "header_size": "h4",
+              "align": "center",
+              "title_color": "#744245",
+              "typography_typography": "custom",
+              "typography_font_family": "Inter",
+              "typography_font_size": {"unit": "px", "size": 14},
+              "typography_font_weight": "600",
+              "typography_letter_spacing": {"unit": "px", "size": 4},
+              "typography_text_transform": "uppercase"
+            }
+          },
+          {
+            "id": "ot-hero-heading",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+              "title": "Professionel terapi — uanset hvor du er",
+              "header_size": "h1",
+              "align": "center",
+              "title_color": "#2a1f1b",
+              "typography_typography": "custom",
+              "typography_font_family": "Cardo",
+              "typography_font_size": {"unit": "px", "size": 48},
+              "typography_font_size_tablet": {"unit": "px", "size": 36},
+              "typography_font_size_mobile": {"unit": "px", "size": 28},
+              "typography_font_weight": "400",
+              "typography_line_height": {"unit": "em", "size": 1.25}
+            }
+          },
+          {
+            "id": "ot-hero-text",
+            "elType": "widget",
+            "widgetType": "text-editor",
+            "settings": {
+              "editor": "<p style=\"text-align: center; font-size: 18px; line-height: 1.7; color: #5a4a45;\">Nogle gange er det sværeste skridt at forlade hjemmet. Med online terapi mødes vi via video — med præcis samme nærvær, fordybelse og fortrolighed som i min praksis. Du sidder trygt i dine egne omgivelser, og jeg er lige her, på den anden side af skærmen.</p>",
+              "align": "center"
+            }
+          },
+          {
+            "id": "ot-hero-btn",
+            "elType": "widget",
+            "widgetType": "cmsmasters-button",
+            "settings": {
+              "text": "Book gratis telefonsamtale",
+              "link": {"url": "/book-samtale/", "is_external": false, "nofollow": false},
+              "button_type": "primary",
+              "button_size": "md",
+              "align": "center",
+              "button_background_color": "#744245",
+              "button_text_color": "#ffffff",
+              "button_border_radius": {"unit": "px", "top": "30", "right": "30", "bottom": "30", "left": "30", "isLinked": true},
+              "button_padding": {"unit": "px", "top": "16", "right": "40", "bottom": "16", "left": "40", "isLinked": false},
+              "typography_typography": "custom",
+              "typography_font_family": "Inter",
+              "typography_font_size": {"unit": "px", "size": 16},
+              "typography_font_weight": "500"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "ot-image-section",
+    "elType": "container",
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "flex_align_items": "center",
+      "background_background": "classic",
+      "background_color": "#ffffff",
+      "padding": {
+        "unit": "px",
+        "top": "60",
+        "right": "30",
+        "bottom": "60",
+        "left": "30",
+        "isLinked": false
+      }
+    },
+    "elements": [
+      {
+        "id": "ot-video-icon",
+        "elType": "widget",
+        "widgetType": "image",
+        "settings": {
+          "image": {"id": 40115, "url": "https://www.psykoterapeut.net/wp-content/uploads/2026/03/video-samtale.svg"},
+          "image_size": "full",
+          "width": {"unit": "px", "size": 220},
+          "align": "center"
+        }
+      }
+    ]
+  },
+
+  {
+    "id": "ot-benefits",
+    "elType": "container",
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "flex_align_items": "center",
+      "background_background": "classic",
+      "background_color": "#ffffff",
+      "padding": {
+        "unit": "px",
+        "top": "20",
+        "right": "30",
+        "bottom": "80",
+        "left": "30",
+        "isLinked": false
+      }
+    },
+    "elements": [
+      {
+        "id": "ot-benefits-heading",
+        "elType": "widget",
+        "widgetType": "heading",
+        "settings": {
+          "title": "Hvorfor vælge online terapi?",
+          "header_size": "h2",
+          "align": "center",
+          "title_color": "#2a1f1b",
+          "typography_typography": "custom",
+          "typography_font_family": "Cardo",
+          "typography_font_size": {"unit": "px", "size": 36},
+          "typography_font_size_mobile": {"unit": "px", "size": 26},
+          "typography_font_weight": "400"
+        }
+      },
+      {
+        "id": "ot-benefits-spacer",
+        "elType": "widget",
+        "widgetType": "spacer",
+        "settings": {
+          "space": {"unit": "px", "size": 40}
+        }
+      },
+      {
+        "id": "ot-benefits-grid",
+        "elType": "container",
+        "settings": {
+          "content_width": "boxed",
+          "container_type": "grid",
+          "grid_columns_grid": {"unit": "fr", "size": 2},
+          "grid_columns_grid_tablet": {"unit": "fr", "size": 2},
+          "grid_columns_grid_mobile": {"unit": "fr", "size": 1},
+          "grid_rows_grid": {"unit": "fr", "size": ""},
+          "grid_gaps": {"column": "30", "row": "30", "unit": "px", "isLinked": true},
+          "max_width": {"unit": "px", "size": 900}
+        },
+        "elements": [
+          {
+            "id": "ot-benefit-1",
+            "elType": "container",
+            "settings": {
+              "flex_direction": "column",
+              "flex_align_items": "center",
+              "background_background": "classic",
+              "background_color": "#FAF6F2",
+              "border_radius": {"unit": "px", "top": "16", "right": "16", "bottom": "16", "left": "16", "isLinked": true},
+              "padding": {"unit": "px", "top": "40", "right": "30", "bottom": "40", "left": "30", "isLinked": false}
+            },
+            "elements": [
+              {
+                "id": "ot-b1-img",
+                "elType": "widget",
+                "widgetType": "image",
+                "settings": {
+                  "image": {"id": 40117, "url": "https://www.psykoterapeut.net/wp-content/uploads/2026/03/tryghed.svg"},
+                  "image_size": "full",
+                  "width": {"unit": "px", "size": 120},
+                  "align": "center"
+                }
+              },
+              {
+                "id": "ot-b1-title",
+                "elType": "widget",
+                "widgetType": "heading",
+                "settings": {
+                  "title": "Dine trygge rammer",
+                  "header_size": "h3",
+                  "align": "center",
+                  "title_color": "#744245",
+                  "typography_typography": "custom",
+                  "typography_font_family": "Cardo",
+                  "typography_font_size": {"unit": "px", "size": 22},
+                  "typography_font_weight": "700"
+                }
+              },
+              {
+                "id": "ot-b1-text",
+                "elType": "widget",
+                "widgetType": "text-editor",
+                "settings": {
+                  "editor": "<p style=\"text-align: center; color: #5a4a45;\">Du sidder i dit eget hjem, i din sofa, med din kop te. For mange er det netop dét, der gør det muligt at åbne op og mærke efter.</p>"
+                }
+              }
+            ]
+          },
+          {
+            "id": "ot-benefit-2",
+            "elType": "container",
+            "settings": {
+              "flex_direction": "column",
+              "flex_align_items": "center",
+              "background_background": "classic",
+              "background_color": "#FAF6F2",
+              "border_radius": {"unit": "px", "top": "16", "right": "16", "bottom": "16", "left": "16", "isLinked": true},
+              "padding": {"unit": "px", "top": "40", "right": "30", "bottom": "40", "left": "30", "isLinked": false}
+            },
+            "elements": [
+              {
+                "id": "ot-b2-img",
+                "elType": "widget",
+                "widgetType": "image",
+                "settings": {
+                  "image": {"id": 40116, "url": "https://www.psykoterapeut.net/wp-content/uploads/2026/03/hele-danmark.svg"},
+                  "image_size": "full",
+                  "width": {"unit": "px", "size": 120},
+                  "align": "center"
+                }
+              },
+              {
+                "id": "ot-b2-title",
+                "elType": "widget",
+                "widgetType": "heading",
+                "settings": {
+                  "title": "Hele Danmark",
+                  "header_size": "h3",
+                  "align": "center",
+                  "title_color": "#744245",
+                  "typography_typography": "custom",
+                  "typography_font_family": "Cardo",
+                  "typography_font_size": {"unit": "px", "size": 22},
+                  "typography_font_weight": "700"
+                }
+              },
+              {
+                "id": "ot-b2-text",
+                "elType": "widget",
+                "widgetType": "text-editor",
+                "settings": {
+                  "editor": "<p style=\"text-align: center; color: #5a4a45;\">Uanset om du bor i København, Nordjylland eller på en ø — afstand er ikke længere en forhindring for at få professionel hjælp.</p>"
+                }
+              }
+            ]
+          },
+          {
+            "id": "ot-benefit-3",
+            "elType": "container",
+            "settings": {
+              "flex_direction": "column",
+              "flex_align_items": "center",
+              "background_background": "classic",
+              "background_color": "#FAF6F2",
+              "border_radius": {"unit": "px", "top": "16", "right": "16", "bottom": "16", "left": "16", "isLinked": true},
+              "padding": {"unit": "px", "top": "40", "right": "30", "bottom": "40", "left": "30", "isLinked": false}
+            },
+            "elements": [
+              {
+                "id": "ot-b3-img",
+                "elType": "widget",
+                "widgetType": "image",
+                "settings": {
+                  "image": {"id": 40118, "url": "https://www.psykoterapeut.net/wp-content/uploads/2026/03/fleksibel.svg"},
+                  "image_size": "full",
+                  "width": {"unit": "px", "size": 120},
+                  "align": "center"
+                }
+              },
+              {
+                "id": "ot-b3-title",
+                "elType": "widget",
+                "widgetType": "heading",
+                "settings": {
+                  "title": "Fleksible tider",
+                  "header_size": "h3",
+                  "align": "center",
+                  "title_color": "#744245",
+                  "typography_typography": "custom",
+                  "typography_font_family": "Cardo",
+                  "typography_font_size": {"unit": "px", "size": 22},
+                  "typography_font_weight": "700"
+                }
+              },
+              {
+                "id": "ot-b3-text",
+                "elType": "widget",
+                "widgetType": "text-editor",
+                "settings": {
+                  "editor": "<p style=\"text-align: center; color: #5a4a45;\">Ingen transporttid, ingen venteværelse. Du logger på, og vi starter. Det gør det lettere at passe terapi ind i en travl hverdag.</p>"
+                }
+              }
+            ]
+          },
+          {
+            "id": "ot-benefit-4",
+            "elType": "container",
+            "settings": {
+              "flex_direction": "column",
+              "flex_align_items": "center",
+              "background_background": "classic",
+              "background_color": "#FAF6F2",
+              "border_radius": {"unit": "px", "top": "16", "right": "16", "bottom": "16", "left": "16", "isLinked": true},
+              "padding": {"unit": "px", "top": "40", "right": "30", "bottom": "40", "left": "30", "isLinked": false}
+            },
+            "elements": [
+              {
+                "id": "ot-b4-img",
+                "elType": "widget",
+                "widgetType": "image",
+                "settings": {
+                  "image": {"id": 40110, "url": "https://www.psykoterapeut.net/wp-content/uploads/2026/03/online-terapi.svg"},
+                  "image_size": "full",
+                  "width": {"unit": "px", "size": 120},
+                  "align": "center"
+                }
+              },
+              {
+                "id": "ot-b4-title",
+                "elType": "widget",
+                "widgetType": "heading",
+                "settings": {
+                  "title": "Lavere barriere",
+                  "header_size": "h3",
+                  "align": "center",
+                  "title_color": "#744245",
+                  "typography_typography": "custom",
+                  "typography_font_family": "Cardo",
+                  "typography_font_size": {"unit": "px", "size": 22},
+                  "typography_font_weight": "700"
+                }
+              },
+              {
+                "id": "ot-b4-text",
+                "elType": "widget",
+                "widgetType": "text-editor",
+                "settings": {
+                  "editor": "<p style=\"text-align: center; color: #5a4a45;\">Hvis du kæmper med angst, social uro eller depression, kan det at forlade hjemmet føles uoverkommeligt. Online terapi fjerner den forhindring.</p>"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "ot-how-it-works",
+    "elType": "container",
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "flex_align_items": "center",
+      "background_background": "classic",
+      "background_color": "#F4EBE4",
+      "padding": {
+        "unit": "px",
+        "top": "80",
+        "right": "30",
+        "bottom": "80",
+        "left": "30",
+        "isLinked": false
+      }
+    },
+    "elements": [
+      {
+        "id": "ot-how-heading",
+        "elType": "widget",
+        "widgetType": "heading",
+        "settings": {
+          "title": "Sådan foregår det",
+          "header_size": "h2",
+          "align": "center",
+          "title_color": "#2a1f1b",
+          "typography_typography": "custom",
+          "typography_font_family": "Cardo",
+          "typography_font_size": {"unit": "px", "size": 36},
+          "typography_font_size_mobile": {"unit": "px", "size": 26},
+          "typography_font_weight": "400"
+        }
+      },
+      {
+        "id": "ot-how-spacer",
+        "elType": "widget",
+        "widgetType": "spacer",
+        "settings": {"space": {"unit": "px", "size": 40}}
+      },
+      {
+        "id": "ot-steps-grid",
+        "elType": "container",
+        "settings": {
+          "content_width": "boxed",
+          "container_type": "grid",
+          "grid_columns_grid": {"unit": "fr", "size": 3},
+          "grid_columns_grid_mobile": {"unit": "fr", "size": 1},
+          "grid_gaps": {"column": "40", "row": "30", "unit": "px", "isLinked": false},
+          "max_width": {"unit": "px", "size": 900}
+        },
+        "elements": [
+          {
+            "id": "ot-step-1",
+            "elType": "container",
+            "settings": {
+              "flex_direction": "column",
+              "flex_align_items": "center",
+              "padding": {"unit": "px", "top": "20", "right": "10", "bottom": "20", "left": "10", "isLinked": false}
+            },
+            "elements": [
+              {
+                "id": "ot-s1-num",
+                "elType": "widget",
+                "widgetType": "heading",
+                "settings": {
+                  "title": "1",
+                  "header_size": "h3",
+                  "align": "center",
+                  "title_color": "#744245",
+                  "typography_typography": "custom",
+                  "typography_font_family": "Cardo",
+                  "typography_font_size": {"unit": "px", "size": 48},
+                  "typography_font_weight": "400"
+                }
+              },
+              {
+                "id": "ot-s1-title",
+                "elType": "widget",
+                "widgetType": "heading",
+                "settings": {
+                  "title": "Ring eller skriv",
+                  "header_size": "h4",
+                  "align": "center",
+                  "title_color": "#2a1f1b",
+                  "typography_typography": "custom",
+                  "typography_font_family": "Inter",
+                  "typography_font_size": {"unit": "px", "size": 18},
+                  "typography_font_weight": "600"
+                }
+              },
+              {
+                "id": "ot-s1-text",
+                "elType": "widget",
+                "widgetType": "text-editor",
+                "settings": {
+                  "editor": "<p style=\"text-align: center; color: #5a4a45;\">Vi starter med en gratis og uforpligtende telefonsamtale, hvor vi taler om hvad du har brug for.</p>"
+                }
+              }
+            ]
+          },
+          {
+            "id": "ot-step-2",
+            "elType": "container",
+            "settings": {
+              "flex_direction": "column",
+              "flex_align_items": "center",
+              "padding": {"unit": "px", "top": "20", "right": "10", "bottom": "20", "left": "10", "isLinked": false}
+            },
+            "elements": [
+              {
+                "id": "ot-s2-num",
+                "elType": "widget",
+                "widgetType": "heading",
+                "settings": {
+                  "title": "2",
+                  "header_size": "h3",
+                  "align": "center",
+                  "title_color": "#744245",
+                  "typography_typography": "custom",
+                  "typography_font_family": "Cardo",
+                  "typography_font_size": {"unit": "px", "size": 48},
+                  "typography_font_weight": "400"
+                }
+              },
+              {
+                "id": "ot-s2-title",
+                "elType": "widget",
+                "widgetType": "heading",
+                "settings": {
+                  "title": "Log på video",
+                  "header_size": "h4",
+                  "align": "center",
+                  "title_color": "#2a1f1b",
+                  "typography_typography": "custom",
+                  "typography_font_family": "Inter",
+                  "typography_font_size": {"unit": "px", "size": 18},
+                  "typography_font_weight": "600"
+                }
+              },
+              {
+                "id": "ot-s2-text",
+                "elType": "widget",
+                "widgetType": "text-editor",
+                "settings": {
+                  "editor": "<p style=\"text-align: center; color: #5a4a45;\">Du modtager et link til vores videomøde. Find et roligt sted, sæt dig godt til rette, og klik på linket.</p>"
+                }
+              }
+            ]
+          },
+          {
+            "id": "ot-step-3",
+            "elType": "container",
+            "settings": {
+              "flex_direction": "column",
+              "flex_align_items": "center",
+              "padding": {"unit": "px", "top": "20", "right": "10", "bottom": "20", "left": "10", "isLinked": false}
+            },
+            "elements": [
+              {
+                "id": "ot-s3-num",
+                "elType": "widget",
+                "widgetType": "heading",
+                "settings": {
+                  "title": "3",
+                  "header_size": "h3",
+                  "align": "center",
+                  "title_color": "#744245",
+                  "typography_typography": "custom",
+                  "typography_font_family": "Cardo",
+                  "typography_font_size": {"unit": "px", "size": 48},
+                  "typography_font_weight": "400"
+                }
+              },
+              {
+                "id": "ot-s3-title",
+                "elType": "widget",
+                "widgetType": "heading",
+                "settings": {
+                  "title": "Vi begynder rejsen",
+                  "header_size": "h4",
+                  "align": "center",
+                  "title_color": "#2a1f1b",
+                  "typography_typography": "custom",
+                  "typography_font_family": "Inter",
+                  "typography_font_size": {"unit": "px", "size": 18},
+                  "typography_font_weight": "600"
+                }
+              },
+              {
+                "id": "ot-s3-text",
+                "elType": "widget",
+                "widgetType": "text-editor",
+                "settings": {
+                  "editor": "<p style=\"text-align: center; color: #5a4a45;\">Sammen udforsker vi det der fylder. Med samme nærvær og dybde som i min praksis — bare via skærmen.</p>"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "ot-reassurance",
+    "elType": "container",
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "flex_align_items": "center",
+      "background_background": "classic",
+      "background_color": "#ffffff",
+      "padding": {
+        "unit": "px",
+        "top": "80",
+        "right": "30",
+        "bottom": "80",
+        "left": "30",
+        "isLinked": false
+      }
+    },
+    "elements": [
+      {
+        "id": "ot-reassure-inner",
+        "elType": "container",
+        "settings": {
+          "content_width": "boxed",
+          "flex_direction": "row",
+          "flex_direction_mobile": "column",
+          "flex_gap": {"column": "60", "row": "40", "unit": "px", "isLinked": false},
+          "flex_align_items": "center",
+          "max_width": {"unit": "px", "size": 900}
+        },
+        "elements": [
+          {
+            "id": "ot-reassure-img",
+            "elType": "container",
+            "settings": {
+              "flex_direction": "column",
+              "flex_align_items": "center",
+              "width": {"unit": "%", "size": 35}
+            },
+            "elements": [
+              {
+                "id": "ot-inger-photo",
+                "elType": "widget",
+                "widgetType": "image",
+                "settings": {
+                  "image": {"id": 39827, "url": "https://www.psykoterapeut.net/wp-content/uploads/2025/09/IngerMarie3_hoejformat.jpg"},
+                  "image_size": "medium_large",
+                  "width": {"unit": "%", "size": 100},
+                  "border_radius": {"unit": "px", "top": "16", "right": "16", "bottom": "16", "left": "16", "isLinked": true}
+                }
+              }
+            ]
+          },
+          {
+            "id": "ot-reassure-text",
+            "elType": "container",
+            "settings": {
+              "flex_direction": "column",
+              "width": {"unit": "%", "size": 60},
+              "flex_gap": {"column": "15", "row": "15", "unit": "px", "isLinked": true}
+            },
+            "elements": [
+              {
+                "id": "ot-reassure-q",
+                "elType": "widget",
+                "widgetType": "heading",
+                "settings": {
+                  "title": "\"Er online terapi lige så godt?\"",
+                  "header_size": "h2",
+                  "title_color": "#2a1f1b",
+                  "typography_typography": "custom",
+                  "typography_font_family": "Cardo",
+                  "typography_font_size": {"unit": "px", "size": 32},
+                  "typography_font_size_mobile": {"unit": "px", "size": 24},
+                  "typography_font_weight": "400",
+                  "typography_font_style": "italic"
+                }
+              },
+              {
+                "id": "ot-reassure-body",
+                "elType": "widget",
+                "widgetType": "text-editor",
+                "settings": {
+                  "editor": "<p style=\"color: #5a4a45; line-height: 1.8; font-size: 16px;\">Det er et spørgsmål, mange stiller — og svaret er ja. Forskning viser, at online terapi er lige så effektivt som fysiske samtaler for de fleste problematikker.</p><p style=\"color: #5a4a45; line-height: 1.8; font-size: 16px;\">I min praksis oplever jeg, at mange klienter faktisk åbner sig hurtigere online. De er i deres egne omgivelser, de føler sig trygge, og det giver rum til at mærke efter.</p><p style=\"color: #5a4a45; line-height: 1.8; font-size: 16px;\">Jeg arbejder med de samme metoder som ved fysisk terapi — <strong>oplevelsesorienteret</strong>, <strong>psykodynamisk</strong> og med <strong>kropsligt fokus</strong>. Vi kan stadig arbejde med åndedræt, kropslige fornemmelser og de dybere lag, selvom vi sidder hver for sig.</p><p style=\"color: #5a4a45; line-height: 1.8; font-size: 16px;\"><em>— Inger Marie Gravesen, Psykoterapeut MPF</em></p>"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "ot-who",
+    "elType": "container",
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "flex_align_items": "center",
+      "background_background": "classic",
+      "background_color": "#F4EBE4",
+      "padding": {
+        "unit": "px",
+        "top": "80",
+        "right": "30",
+        "bottom": "80",
+        "left": "30",
+        "isLinked": false
+      }
+    },
+    "elements": [
+      {
+        "id": "ot-who-inner",
+        "elType": "container",
+        "settings": {
+          "content_width": "boxed",
+          "flex_direction": "column",
+          "flex_align_items": "center",
+          "max_width": {"unit": "px", "size": 700},
+          "flex_gap": {"column": "30", "row": "30", "unit": "px", "isLinked": true}
+        },
+        "elements": [
+          {
+            "id": "ot-who-heading",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+              "title": "Hvem er online terapi for?",
+              "header_size": "h2",
+              "align": "center",
+              "title_color": "#2a1f1b",
+              "typography_typography": "custom",
+              "typography_font_family": "Cardo",
+              "typography_font_size": {"unit": "px", "size": 36},
+              "typography_font_size_mobile": {"unit": "px", "size": 26},
+              "typography_font_weight": "400"
+            }
+          },
+          {
+            "id": "ot-who-list",
+            "elType": "widget",
+            "widgetType": "cmsmasters-icon-list",
+            "settings": {
+              "icon_list": [
+                {"text": "Dig der bor langt fra Aarhus, men ønsker professionel terapi", "selected_icon": {"value": "fas fa-check", "library": "fa-solid"}},
+                {"text": "Dig der kæmper med angst og har svært ved at forlade hjemmet", "selected_icon": {"value": "fas fa-check", "library": "fa-solid"}},
+                {"text": "Dig med en travl hverdag, der har brug for fleksible tider", "selected_icon": {"value": "fas fa-check", "library": "fa-solid"}},
+                {"text": "Dig der gerne vil prøve terapi, men foretrækker at starte hjemmefra", "selected_icon": {"value": "fas fa-check", "library": "fa-solid"}},
+                {"text": "Dig der bor i udlandet, men søger terapi på dansk", "selected_icon": {"value": "fas fa-check", "library": "fa-solid"}},
+                {"text": "Dig der allerede går i terapi fysisk, men ønsker online som supplement", "selected_icon": {"value": "fas fa-check", "library": "fa-solid"}}
+              ],
+              "icon_color": "#744245",
+              "text_color": "#2a1f1b",
+              "icon_size": {"unit": "px", "size": 16},
+              "space_between": {"unit": "px", "size": 18},
+              "typography_typography": "custom",
+              "typography_font_family": "Inter",
+              "typography_font_size": {"unit": "px", "size": 17},
+              "typography_line_height": {"unit": "em", "size": 1.6}
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "ot-praktisk",
+    "elType": "container",
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "flex_align_items": "center",
+      "background_background": "classic",
+      "background_color": "#ffffff",
+      "padding": {
+        "unit": "px",
+        "top": "80",
+        "right": "30",
+        "bottom": "80",
+        "left": "30",
+        "isLinked": false
+      }
+    },
+    "elements": [
+      {
+        "id": "ot-prak-inner",
+        "elType": "container",
+        "settings": {
+          "content_width": "boxed",
+          "flex_direction": "column",
+          "flex_align_items": "center",
+          "max_width": {"unit": "px", "size": 700},
+          "flex_gap": {"column": "20", "row": "20", "unit": "px", "isLinked": true}
+        },
+        "elements": [
+          {
+            "id": "ot-prak-heading",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+              "title": "Praktisk information",
+              "header_size": "h2",
+              "align": "center",
+              "title_color": "#2a1f1b",
+              "typography_typography": "custom",
+              "typography_font_family": "Cardo",
+              "typography_font_size": {"unit": "px", "size": 36},
+              "typography_font_size_mobile": {"unit": "px", "size": 26},
+              "typography_font_weight": "400"
+            }
+          },
+          {
+            "id": "ot-prak-text",
+            "elType": "widget",
+            "widgetType": "text-editor",
+            "settings": {
+              "editor": "<div style=\"color: #5a4a45; line-height: 1.8; font-size: 16px;\"><p><strong>Pris:</strong> 750 kr. for en individuel session (60 min.) — samme pris som fysisk terapi.</p><p><strong>Platform:</strong> Vi bruger en sikker videoforbindelse. Du modtager et link inden sessionen.</p><p><strong>Det eneste du behøver:</strong> En computer eller tablet med kamera og mikrofon, samt et roligt sted hvor du kan sidde uforstyrret.</p><p><strong>Indledende samtale:</strong> Den første telefonsamtale er <strong>helt gratis</strong> og uforpligtende. Her taler vi om, hvad du har brug for, og om online terapi er det rigtige for dig.</p></div>"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "ot-cta",
+    "elType": "container",
+    "settings": {
+      "content_width": "full",
+      "flex_direction": "column",
+      "flex_align_items": "center",
+      "background_background": "classic",
+      "background_color": "#744245",
+      "padding": {
+        "unit": "px",
+        "top": "80",
+        "right": "30",
+        "bottom": "80",
+        "left": "30",
+        "isLinked": false
+      }
+    },
+    "elements": [
+      {
+        "id": "ot-cta-inner",
+        "elType": "container",
+        "settings": {
+          "content_width": "boxed",
+          "flex_direction": "column",
+          "flex_align_items": "center",
+          "max_width": {"unit": "px", "size": 600},
+          "flex_gap": {"column": "25", "row": "25", "unit": "px", "isLinked": true}
+        },
+        "elements": [
+          {
+            "id": "ot-cta-heading",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+              "title": "Klar til at tage det første skridt?",
+              "header_size": "h2",
+              "align": "center",
+              "title_color": "#ffffff",
+              "typography_typography": "custom",
+              "typography_font_family": "Cardo",
+              "typography_font_size": {"unit": "px", "size": 36},
+              "typography_font_size_mobile": {"unit": "px", "size": 26},
+              "typography_font_weight": "400"
+            }
+          },
+          {
+            "id": "ot-cta-text",
+            "elType": "widget",
+            "widgetType": "text-editor",
+            "settings": {
+              "editor": "<p style=\"text-align: center; color: #e8d5cf; font-size: 17px; line-height: 1.7;\">Ring til mig på <strong style=\"color: #ffffff;\">29 93 01 10</strong> eller book en gratis, uforpligtende telefonsamtale. Det koster ingenting — og det forpligter dig ikke til noget.</p>"
+            }
+          },
+          {
+            "id": "ot-cta-btn",
+            "elType": "widget",
+            "widgetType": "cmsmasters-button",
+            "settings": {
+              "text": "Book gratis telefonsamtale",
+              "link": {"url": "/book-samtale/", "is_external": false, "nofollow": false},
+              "button_type": "primary",
+              "button_size": "md",
+              "align": "center",
+              "button_background_color": "#ffffff",
+              "button_text_color": "#744245",
+              "button_border_radius": {"unit": "px", "top": "30", "right": "30", "bottom": "30", "left": "30", "isLinked": true},
+              "button_padding": {"unit": "px", "top": "16", "right": "40", "bottom": "16", "left": "40", "isLinked": false},
+              "typography_typography": "custom",
+              "typography_font_family": "Inter",
+              "typography_font_size": {"unit": "px", "size": 16},
+              "typography_font_weight": "600"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

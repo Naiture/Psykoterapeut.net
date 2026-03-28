@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" stroke="#2a1f3b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Clock / calendar illustration -->
+  <!-- Main clock -->
+  <circle cx="55" cy="55" r="35" fill="#f5f0eb" stroke="#2a1f3b" stroke-width="1.5"/>
+  <circle cx="55" cy="55" r="30" fill="#fff" stroke="#2a1f3b" stroke-width="1"/>
+  <!-- Clock face markers -->
+  <line x1="55" y1="28" x2="55" y2="32" stroke="#2a1f3b" stroke-width="2"/>
+  <line x1="55" y1="78" x2="55" y2="82" stroke="#2a1f3b" opacity="0.4"/>
+  <line x1="28" y1="55" x2="32" y2="55" stroke="#2a1f3b" opacity="0.4"/>
+  <line x1="78" y1="55" x2="82" y2="55" stroke="#2a1f3b" opacity="0.4"/>
+  <!-- Clock hands -->
+  <line x1="55" y1="55" x2="55" y2="35" stroke="#2a1f3b" stroke-width="2.5"/>
+  <line x1="55" y1="55" x2="70" y2="48" stroke="#744245" stroke-width="2"/>
+  <circle cx="55" cy="55" r="3" fill="#744245" stroke="none"/>
+  <!-- Small calendar -->
+  <g transform="translate(82, 72)">
+    <rect x="0" y="0" width="24" height="22" rx="4" fill="#744245" stroke="#2a1f3b"/>
+    <rect x="0" y="0" width="24" height="8" rx="4" fill="#744245" stroke="#2a1f3b"/>
+    <line x1="7" y1="14" x2="11" y2="14" stroke="#f5f0eb" stroke-width="1.5"/>
+    <line x1="14" y1="14" x2="18" y2="14" stroke="#f5f0eb" stroke-width="1.5" opacity="0.5"/>
+  </g>
+  <!-- Decorative elements -->
+  <circle cx="20" cy="90" r="1.5" fill="#2a1f3b"/>
+  <circle cx="100" cy="30" r="1" fill="#2a1f3b"/>
+  <circle cx="95" cy="55" r="1.5" fill="#2a1f3b"/>
+  <!-- Sun rays (morning vibe) -->
+  <g transform="translate(90, 18)" opacity="0.4">
+    <circle cx="0" cy="0" r="5" fill="#744245" stroke="none"/>
+    <line x1="0" y1="-10" x2="0" y2="-7" stroke="#744245" stroke-width="1.5"/>
+    <line x1="7" y1="-7" x2="5" y2="-5" stroke="#744245" stroke-width="1.5"/>
+    <line x1="10" y1="0" x2="7" y2="0" stroke="#744245" stroke-width="1.5"/>
+  </g>
+</svg>

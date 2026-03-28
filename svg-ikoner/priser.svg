@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" stroke="#2a1f3b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Wallet / payment illustration -->
+  <!-- Open wallet -->
+  <rect x="22" y="42" width="56" height="40" rx="6" fill="#f5f0eb" stroke="#2a1f3b"/>
+  <path d="M22 55 L78 55" opacity="0.3"/>
+  <rect x="58" y="50" width="24" height="16" rx="4" fill="#fff" stroke="#2a1f3b"/>
+  <circle cx="70" cy="58" r="3" fill="#744245" stroke="none"/>
+  <!-- Coins -->
+  <g transform="translate(85, 35)">
+    <ellipse cx="0" cy="0" rx="14" ry="10" fill="#744245" stroke="#2a1f3b" opacity="0.9"/>
+    <ellipse cx="0" cy="-4" rx="14" ry="10" fill="#744245" stroke="#2a1f3b"/>
+    <text x="0" y="0" text-anchor="middle" fill="#f5f0eb" font-family="Inter, sans-serif" font-size="10" font-weight="700" stroke="none">kr</text>
+  </g>
+  <!-- Heart (gratis) -->
+  <g transform="translate(35, 25)">
+    <path d="M0 5 C0 0 -7 -3 -7 3 C-7 8 0 13 0 13 C0 13 7 8 7 3 C7 -3 0 0 0 5Z" fill="#744245" stroke="none" opacity="0.6"/>
+  </g>
+  <!-- Decorative stars -->
+  <circle cx="100" cy="75" r="1.5" fill="#2a1f3b"/>
+  <circle cx="15" cy="35" r="1" fill="#2a1f3b"/>
+  <circle cx="50" cy="95" r="1.5" fill="#2a1f3b"/>
+  <!-- Extra coin -->
+  <g transform="translate(20, 85)">
+    <ellipse cx="0" cy="0" rx="10" ry="7" fill="#744245" stroke="#2a1f3b" opacity="0.3"/>
+  </g>
+</svg>
