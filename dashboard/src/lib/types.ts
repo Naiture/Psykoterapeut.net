@@ -51,7 +51,7 @@ export interface ChangeLogEntry {
   author: "Chris" | "Inger Marie" | "Claude" | "Bureau";
 }
 
-export type IdeaStatus = "frø" | "udfoldet" | "test" | "implementeret" | "forkastet";
+export type IdeaStatus = "idé" | "planlagt" | "test" | "implementeret";
 
 export interface Idea {
   id: string;

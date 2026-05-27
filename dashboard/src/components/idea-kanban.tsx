@@ -5,14 +5,13 @@ import { GlassCard } from "@/components/glass-card";
 import type { Idea, IdeaStatus } from "@/lib/types";
 
 const COLUMNS: { status: IdeaStatus; emoji: string; label: string }[] = [
-  { status: "frø", emoji: "🌱", label: "Frø" },
-  { status: "udfoldet", emoji: "🌿", label: "Udfoldet" },
+  { status: "idé", emoji: "💡", label: "Idé" },
+  { status: "planlagt", emoji: "🗓️", label: "Planlagt" },
   { status: "test", emoji: "⚗️", label: "Test" },
   { status: "implementeret", emoji: "✅", label: "Implementeret" },
-  { status: "forkastet", emoji: "❌", label: "Forkastet" },
 ];
 
-const STORAGE_KEY = "dashboard:idea-status";
+const STORAGE_KEY = "dashboard:idea-status:v2";
 
 const IMPACT_COLOR: Record<Idea["impact"], string> = {
   "lav": "text-white/55",
@@ -95,7 +94,7 @@ export function IdeaKanban({ initialIdeas }: { initialIdeas: Idea[] }) {
           Nulstil til standard
         </button>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
         {COLUMNS.map((col) => {
           const colIdeas = ideas.filter((i) => i.status === col.status);
           const isOver = dragOverCol === col.status;
