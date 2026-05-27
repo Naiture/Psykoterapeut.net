@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Marketing Dashboard
 
-## Getting Started
+Visuel skeleton (v1) — Next.js + crystal glass over fullscreen vandfald-baggrund.
 
-First, run the development server:
+## Kør lokalt
 
 ```bash
+cp .env.local.example .env.local
+# Ret DASHBOARD_PASSWORD til ønsket password
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Åbn http://localhost:3000 og log ind.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Sektioner
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `/` — Oversigt (KPI'er + chart + seneste ændringer)
+- `/kampagner` — kampagne-performance table
+- `/sogeord` — top konverterende + wasted spend
+- `/landingssider` — pr. side conv rate + benchmark
+- `/change-log` — tidslinje med ændringer
+- `/ide-bank` — idé-kort med status (🌱 🌿 ⚗️ ✅ ❌)
+- `/eksperimenter` — strukturerede tests
 
-## Learn More
+## Data
 
-To learn more about Next.js, take a look at the following resources:
+Alle data er hardcoded i `src/lib/fixtures/`. BigQuery + Postgres kommer i fase 2 og 3 — se [spec](../docs/superpowers/specs/2026-05-27-marketing-dashboard-design.md).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Next.js 16 (App Router, Turbopack) · TypeScript · Tailwind v4
+- shadcn/ui · Recharts
+- Fonte: Inter + Cardo via `next/font`
 
-## Deploy on Vercel
+## Auth
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Simpel password-gate: `src/proxy.ts` tjekker en cookie sat af `/api/auth/login`. Login-form på `/login`. Cookie holder 30 dage.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Noter
+
+- Next.js 16 placerede koden i `src/app/` på trods af `--src-dir false` — det er nyt default.
+- `middleware.ts` er deprecated i Next.js 16 — vi bruger `proxy.ts` med en `proxy()` funktion.
