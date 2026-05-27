@@ -36,37 +36,52 @@ Et dashboard hvor Chris og Inger Marie kan se marketing-data samlet (Google Ads,
 
 ## Visuel identitet
 
-**Palette (valgt mood: Light Beige, brand-aligned):**
+**Mood:** Ultra-transparent crystal glass over et fullscreen vandfalds-foto. Inspireret af Apple-style premium glassmorphism — cards er næsten usynlige, så billedet danser igennem dataen.
+
+**Baggrunds-billede:**
+- Fil: `IMG_2134-rot.jpg` (vandfald, portrait orientation) — kopieres til `dashboard/public/bg/waterfall.jpg`
+- Optimeres til ~280KB JPEG, max-bredde ~1100px (originalen er 2.2MB HEIC)
+- CSS: `background-size: cover; background-position: center center;`
+- Filter: `brightness(0.95) saturate(1.05)` — letvejs polish, ingen blur
+- Fixed position, dækker hele viewport
+
+**Scrim (over billedet, under indhold):**
+- Subtil mørk gradient: `linear-gradient(180deg, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.22) 100%)`
+- Sikrer at lyse tekster forbliver læselige i top af viewport
+
+**Cards (crystal glass — finale værdier valgt af bruger):**
+- `background: rgba(255, 255, 255, 0.02)` — næsten usynligt
+- `backdrop-filter: blur(2px) saturate(1.5)`
+- `border: 1px solid rgba(255, 255, 255, 0.12)`
+- `box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18), 0 12px 40px rgba(0, 0, 0, 0.28)`
+- Border-radius: 16px
+
+**Tekst (alt på crystal cards skal kunne læses over varieret baggrund):**
+- Alle tekster har `text-shadow: 0 1px 8px rgba(0,0,0,0.6)` for kontrast
+- Tal: 32px Inter semibold + tungere shadow `0 2px 22px rgba(0,0,0,0.7)`
+- Primær tekstfarve: `#FFFFFF`
+- Labels: `rgba(255, 255, 255, 0.82)`, 11px uppercase, letter-spacing 0.1em
+- Trend-accent (↑/↓ %): `#FFD09A` (honning, varm)
+- Bar-graf: `linear-gradient(180deg, rgba(255, 208, 154, 0.85), rgba(255, 208, 154, 0.2))`
+
+**Palette tokens (Tailwind / CSS vars):**
 
 | Token | Værdi | Brug |
 |---|---|---|
-| `--bg` | `#F4EBE4` | Side-baggrund |
-| `--glow-1` | `rgba(116, 66, 69, 0.18)` | Top-left radial glow (brun) |
-| `--glow-2` | `rgba(212, 165, 116, 0.28)` | Bottom-right radial glow (honning) |
-| `--card-bg` | `rgba(255, 255, 255, 0.55)` | Glassmorphism cards |
-| `--card-border` | `rgba(116, 66, 69, 0.08)` | Card border |
-| `--card-shadow` | `0 4px 24px rgba(116, 66, 69, 0.06)` | Card shadow |
-| `--primary` | `#744245` | Primær (brand) |
-| `--accent` | `#B8732E` | Honning-accent (trends, highlights) |
-| `--text` | `#2A1814` | Hovedtekst |
-| `--text-muted` | `#888` | Sekundær tekst |
-
-**Glow-baggrund:**
-- Fixed-position layer bag alt indhold
-- To radial gradients (top-left brun, bottom-right honning)
-- 40-50px blur
-- Implementeres som `<GlowBackground />` komponent i root layout
-
-**Cards (glassmorphism):**
-- `bg-white/55` + `backdrop-blur-xl`
-- 1px border i `rgba(116,66,69,0.08)`
-- 14-18px border-radius
-- Blød skygge
+| `--card-bg` | `rgba(255, 255, 255, 0.02)` | Crystal card background |
+| `--card-border` | `rgba(255, 255, 255, 0.12)` | Card border |
+| `--card-blur` | `blur(2px) saturate(1.5)` | Backdrop filter |
+| `--accent` | `#FFD09A` | Trend tal, bar-graf, log dots |
+| `--text` | `#FFFFFF` | Primær tekst |
+| `--text-muted` | `rgba(255, 255, 255, 0.78)` | Sekundær tekst |
+| `--text-shadow` | `0 1px 8px rgba(0,0,0,0.6)` | Standard tekst-skygge |
 
 **Typografi:**
-- Sektions-overskrifter: Cardo italic (matcher sitet)
+- Sektions-overskrifter: Cardo serif (matcher sitet)
 - Body, labels, tal: Inter
-- Labels: 11px, uppercase, letter-spacing 0.08em, farve `var(--primary)`
+- Labels: 11px, uppercase, letter-spacing 0.1em, hvid 82% opacity
+
+**Bevidst note om brand-konsistens:** Vi forlader den lyse beige paletfra hovedsitet i dashboardet — det er en bevidst beslutning. Dashboardet er et internt værktøj med en anden æstetisk rolle (atmosfærisk, fokuserende) end den offentlige psykoterapeut.net. Hvis billedet senere skal kunne ændres pr. bruger, kan baggrunden gøres til en setting i fase 3.
 
 ## Layout & navigation
 
@@ -82,10 +97,10 @@ Et dashboard hvor Chris og Inger Marie kan se marketing-data samlet (Google Ads,
 └─────────────────────────────────────────────────────────────┘
 ```
 
-- **Top-bar:** Sticky, glassmorphism, indeholder logo (Cardo), tabs, periode-vælger
+- **Top-bar:** Sticky crystal glass, indeholder logo (Cardo), tabs, periode-vælger
 - **Tabs:** Oversigt · Kampagner · Søgeord · Landingssider · Change log · Idé-bank · Eksperimenter
 - **Periode-vælger:** Dummy dropdown i v1 (sidste 7d / 30d / 90d / custom)
-- **Active tab:** `bg-[rgba(116,66,69,0.15)]` + `text-primary` + medium font-weight
+- **Active tab:** `bg-white/18` + `text-white` + medium font-weight
 
 ## Sektioner (v1 indhold)
 
@@ -150,9 +165,12 @@ dashboard/
 │   │   └── eksperimenter/page.tsx
 │   ├── globals.css                 # Tailwind base + custom CSS vars
 │   └── layout.tsx                  # root layout med GlowBackground
+├── public/
+│   └── bg/
+│       └── waterfall.jpg           # optimeret baggrunds-billede (~280KB)
 ├── components/
 │   ├── ui/                         # shadcn primitives (Button, Card, Badge, Table, Tabs, etc.)
-│   ├── glow-background.tsx         # fixed-position dual radial glow layer
+│   ├── background.tsx              # fullscreen waterfall image + scrim layers
 │   ├── top-nav.tsx                 # sticky top-bar med tabs
 │   ├── period-selector.tsx
 │   ├── kpi-card.tsx
@@ -182,15 +200,15 @@ dashboard/
 
 ## Komponent-kontrakter
 
-**`<GlowBackground />`** — fixed-position layer, two radial gradients, no props.
+**`<Background />`** — to fixed-position layers: (1) waterfall image med `background-size: cover`, (2) mørk gradient-scrim. Ingen props.
 
-**`<KpiCard label value trend trendDirection />`** — glassmorphism card. `trend` er string ("12%"), `trendDirection` er `"up" | "down"` (styrer farve).
+**`<KpiCard label value trend trendDirection />`** — crystal glass card (`bg-white/2` + `backdrop-blur-[2px]`). `trend` er string ("12%"), `trendDirection` er `"up" | "down"` (begge bruger samme honning-accent farve, kun arrow-glyph ændres).
 
 **`<TopNav />`** — læser current pathname fra `usePathname()`, viser active tab. Tabs er hardcoded liste i komponenten.
 
 **`<PeriodSelector value onChange />`** — dropdown med 4 valg. I v1 er den controlled men ændrer ikke data (dummy).
 
-**`<SectionHeading children />`** — Cardo italic, color `var(--primary)`.
+**`<SectionHeading children />`** — Cardo serif, hvid med `text-shadow` for kontrast over billedet.
 
 ## Test/verificering for v1
 
@@ -200,7 +218,7 @@ Manuel test — ingen automatiserede tests for visuelt skelet:
 2. Browser åbner `localhost:3000` → redirect til `/login`
 3. Indtast password → redirect tilbage til `/` (Oversigt)
 4. Klik gennem alle 7 tabs — alle skal rendere uden fejl
-5. Glows og glassmorphism virker (visual check)
+5. Baggrunds-billede og crystal-cards virker (visual check)
 6. Responsiv check ved 1280px og 1440px (ikke mobile i v1)
 7. Cardo og Inter fonte loader korrekt
 
