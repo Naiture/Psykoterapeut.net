@@ -20,3 +20,6 @@ dashboard/.next
 dashboard/.env.local
 dashboard/.env*.local
 dashboard/next-env.d.ts
+
+# Superpowers brainstorm sessions
+.superpowers/
