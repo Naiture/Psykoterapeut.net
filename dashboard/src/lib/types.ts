@@ -1,0 +1,78 @@
+export type TrendDirection = "up" | "down" | "flat";
+
+export interface Kpi {
+  label: string;
+  value: string;
+  trend: string;
+  trendDirection: TrendDirection;
+}
+
+export type Period = "7d" | "30d" | "90d" | "custom";
+
+export interface Campaign {
+  name: string;
+  clicks: number;
+  conversions: number;
+  conversionRate: number;
+  spendKr: number;
+  cpaKr: number;
+  status: "active" | "paused";
+}
+
+export interface Keyword {
+  term: string;
+  searchVolume: number;
+  clicks: number;
+  conversions: number;
+  spendKr: number;
+}
+
+export interface LandingPage {
+  url: string;
+  sessions: number;
+  conversionRate: number;
+  avgTimeSeconds: number;
+}
+
+export type ChangeCategory =
+  | "kampagne"
+  | "keyword"
+  | "landing-page"
+  | "seo"
+  | "andet";
+
+export interface ChangeLogEntry {
+  id: string;
+  timestamp: string;
+  category: ChangeCategory;
+  title: string;
+  description: string;
+  expectedImpact: string;
+  author: "Chris" | "Inger Marie" | "Claude" | "Bureau";
+}
+
+export type IdeaStatus = "frø" | "udfoldet" | "test" | "implementeret" | "forkastet";
+
+export interface Idea {
+  id: string;
+  title: string;
+  description: string;
+  status: IdeaStatus;
+  proposedBy: "Chris" | "Inger Marie" | "Claude";
+  effortHours: number;
+  impact: "lav" | "medium" | "høj";
+  tags: string[];
+}
+
+export type ExperimentStatus = "planlagt" | "kører" | "afsluttet";
+
+export interface Experiment {
+  id: string;
+  hypothesis: string;
+  metric: string;
+  periodStart: string;
+  periodEnd: string;
+  status: ExperimentStatus;
+  result?: string;
+  conclusion?: string;
+}
