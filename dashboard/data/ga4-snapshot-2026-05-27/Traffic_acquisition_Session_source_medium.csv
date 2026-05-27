@@ -1,0 +1,26 @@
+# ----------------------------------------
+# Traffic acquisition: Session source / medium
+# Account: psykoterapeut.net
+# Property: psykoterapeut.net
+# ----------------------------------------
+# 
+# All Users
+# Start date: 20260101
+# End date: 20260527
+Session source / medium,Session campaign,Sessions,Engaged sessions,Engagement rate,Average engagement time per session,Events per session,Event count,Key events,Session key event rate,Total revenue
+google / cpc,Stress,430,172,0.4,33.83953488372093,4.337209302325581,1865,1,0.002325581395348837,0
+google / cpc,Angst,336,187,0.5565476190476191,38.220238095238095,4.949404761904762,1663,16,0.044642857142857144,0
+(direct) / (none),(direct),173,63,0.36416184971098264,58.7514450867052,7.809248554913295,1351,8,0.04046242774566474,0
+google / cpc,Psykoterapi i Højbjerg,136,86,0.6323529411764706,46.404411764705884,6.3161764705882355,859,9,0.029411764705882353,0
+google / organic,(organic),92,59,0.6413043478260869,61.01086956521739,6.434782608695652,592,0,0,0
+ads.google.com / referral,(referral),12,6,0.5,346.6666666666667,24.083333333333332,289,0,0,0
+(data not available),(cross-network),8,5,0.625,31.5,6,48,0,0,0
+google / cpc,(organic),8,8,1,76.5,11.5,92,0,0,0
+(not set),(not set),7,2,0.2857142857142857,34.285714285714285,4.285714285714286,30,0,0,0
+google / cpc,Online Terapi,7,7,1,50.42857142857143,8.142857142857142,57,0,0,0
+google / cpc,(not set),5,0,0,0,3,15,0,0,0
+m.facebook.com / referral,(referral),5,0,0,0,3,15,0,0,0
+bing / organic,(organic),4,1,0.25,27.5,4.75,19,0,0,0
+facebook.com / referral,(referral),2,1,0.5,2,3.5,7,0,0,0
+duckduckgo / organic,(organic),1,0,0,2,4,4,0,0,0
+ecosia.org / organic,(organic),1,0,0,0,3,3,0,0,0

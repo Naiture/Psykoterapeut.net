@@ -1,0 +1,32 @@
+# ----------------------------------------
+# Landing page: Landing page
+# Account: psykoterapeut.net
+# Property: psykoterapeut.net
+# ----------------------------------------
+# 
+# All Users
+# Start date: 20260101
+# End date: 20260527
+Landing page,Sessions,Active users,New users,Average engagement time per session,Key events,Total revenue,Session key event rate
+/terapi-mod-stress,424,410,408,34.221698113207545,1,0,0.0023584905660377358
+/angst-behandling-i-aarhus-psykoterapeut-inger-marie-graversen,322,297,292,38.45031055900621,12,0,0.034161490683229816
+/terapi,160,151,146,61.1375,9,0,0.025
+/,138,94,89,92.65942028985508,2,0,0.007246376811594203
+/om,64,59,54,32.0625,1,0,0.015625
+(not set),32,13,0,14.0625,0,0,0
+/eksempel-side,22,18,11,6.909090909090909,1,0,0.045454545454545456
+/online-terapi,16,16,15,24.1875,0,0,0
+/book-samtale,11,11,5,113.0909090909091,2,0,0.18181818181818182
+/praktiske-oplysninger,7,5,2,15.857142857142858,0,0,0
+/tak-for-booking,6,5,3,3.1666666666666665,6,0,1
+/klienthistorier,5,4,4,7,0,0,0
+/relationsterapi,4,2,1,11.75,0,0,0
+/tag/mentalhealth,3,3,3,0,0,0,0
+/tag/therapy,3,3,3,0.6666666666666666,0,0,0
+/tag/psychologyfacts,2,2,2,0,0,0,0
+/tag/recovery,2,2,2,0,0,0,0
+/traumebehandling,2,2,2,0,0,0,0
+/checkout,1,1,1,19,0,0,0
+/faciliteter,1,1,1,0,0,0,0
+/our-doctors,1,1,0,1232,0,0,0
+/wp-login,1,1,0,4,0,0,0
