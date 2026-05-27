@@ -1,8 +1,12 @@
 import { GlassCard } from "@/components/glass-card";
 import { SectionHeading } from "@/components/section-heading";
-import { campaigns } from "@/lib/fixtures/campaigns";
+import { getCampaigns } from "@/lib/bq/queries/campaigns";
 
-export default function KampagnerPage() {
+export const revalidate = 3600;
+
+export default async function KampagnerPage() {
+  const campaigns = await getCampaigns(30);
+
   return (
     <div className="space-y-4 mt-2">
       <SectionHeading>Kampagner</SectionHeading>
@@ -43,6 +47,13 @@ export default function KampagnerPage() {
                 </td>
               </tr>
             ))}
+            {campaigns.length === 0 && (
+              <tr>
+                <td colSpan={7} className="px-5 py-8 text-center text-white/60 drop-shadow">
+                  Ingen kampagne-data i de sidste 30 dage.
+                </td>
+              </tr>
+            )}
           </tbody>
         </table>
       </GlassCard>
