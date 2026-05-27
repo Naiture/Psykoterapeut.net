@@ -1,21 +1,24 @@
 "use client";
 
 import { ResponsiveContainer, AreaChart, Area, XAxis, YAxis, Tooltip, ReferenceLine } from "recharts";
-import { conversionsOverTime } from "@/lib/fixtures/kpis";
 import { changeLog } from "@/lib/fixtures/change-log";
 
-export function ConversionsChart() {
+interface ConversionsChartProps {
+  data: { date: string; conversions: number }[];
+}
+
+export function ConversionsChart({ data }: ConversionsChartProps) {
   const annotations = changeLog
     .map((c) => ({
       date: c.timestamp.slice(0, 10),
       title: c.title,
     }))
-    .filter((a) => conversionsOverTime.some((d) => d.date === a.date));
+    .filter((a) => data.some((d) => d.date === a.date));
 
   return (
     <div className="h-64 w-full">
       <ResponsiveContainer width="100%" height="100%">
-        <AreaChart data={conversionsOverTime} margin={{ top: 16, right: 12, left: 0, bottom: 0 }}>
+        <AreaChart data={data} margin={{ top: 16, right: 12, left: 0, bottom: 0 }}>
           <defs>
             <linearGradient id="conv" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0%" stopColor="#ffd09a" stopOpacity={0.85} />

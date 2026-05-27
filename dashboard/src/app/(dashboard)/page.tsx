@@ -2,10 +2,17 @@ import { GlassCard } from "@/components/glass-card";
 import { KpiCard } from "@/components/kpi-card";
 import { SectionHeading } from "@/components/section-heading";
 import { ConversionsChart } from "@/components/conversions-chart";
-import { kpis } from "@/lib/fixtures/kpis";
 import { changeLog } from "@/lib/fixtures/change-log";
+import { getKpis, getConversionsOverTime } from "@/lib/bq/queries/kpis";
 
-export default function OversigtPage() {
+export const revalidate = 3600;
+
+export default async function OversigtPage() {
+  const [kpis, conversionsOverTime] = await Promise.all([
+    getKpis(),
+    getConversionsOverTime(30),
+  ]);
+
   return (
     <div className="space-y-4 mt-2">
       <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-4">
@@ -20,7 +27,7 @@ export default function OversigtPage() {
           <p className="text-[11px] text-white/72 drop-shadow mb-3">
             Daglige conversions med change-log markører
           </p>
-          <ConversionsChart />
+          <ConversionsChart data={conversionsOverTime} />
         </GlassCard>
 
         <GlassCard className="p-5">
