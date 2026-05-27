@@ -1,20 +1,48 @@
 import { GlassCard } from "@/components/glass-card";
 import { KpiCard } from "@/components/kpi-card";
 import { SectionHeading } from "@/components/section-heading";
-import { ConversionsChart } from "@/components/conversions-chart";
+import { CampaignConversionsChart } from "@/components/campaign-conversions-chart";
 import { changeLog } from "@/lib/fixtures/change-log";
-import { getKpis, getConversionsOverTime } from "@/lib/bq/queries/kpis";
+import { ADS_CAMPAIGNS_SNAPSHOT, ADS_SNAPSHOT_PERIOD } from "@/lib/ads/snapshot";
+import type { Kpi } from "@/lib/types";
 
 export const revalidate = 3600;
 
-export default async function OversigtPage() {
-  const [kpis, conversionsOverTime] = await Promise.all([
-    getKpis(),
-    getConversionsOverTime(30),
-  ]);
+const dkrFmt = new Intl.NumberFormat("da-DK", { maximumFractionDigits: 0 });
+
+function getSnapshotKpis(): Kpi[] {
+  const totals = ADS_CAMPAIGNS_SNAPSHOT.reduce(
+    (acc, c) => ({
+      clicks: acc.clicks + c.clicks,
+      conversions: acc.conversions + c.conversions,
+      spend: acc.spend + c.costKr,
+    }),
+    { clicks: 0, conversions: 0, spend: 0 },
+  );
+  const cpa = totals.conversions > 0 ? totals.spend / totals.conversions : 0;
+  return [
+    { label: "Klik", value: dkrFmt.format(totals.clicks), trend: "9 mdr snapshot", trendDirection: "flat" },
+    { label: "Conversions", value: dkrFmt.format(totals.conversions), trend: "19 kontakter + 18 formularer", trendDirection: "up" },
+    { label: "Ad spend", value: `${dkrFmt.format(Math.round(totals.spend))} kr`, trend: "9 mdr i alt", trendDirection: "flat" },
+    { label: "CPA", value: cpa > 0 ? `${dkrFmt.format(Math.round(cpa))} kr` : "—", trend: "konto-snit", trendDirection: "flat" },
+  ];
+}
+
+export default function OversigtPage() {
+  const kpis = getSnapshotKpis();
+  const chartData = ADS_CAMPAIGNS_SNAPSHOT.map((c) => ({
+    name: c.name,
+    conversions: c.conversions,
+    cpa: c.conversions > 0 ? c.costKr / c.conversions : 0,
+    status: c.status,
+  })).sort((a, b) => b.conversions - a.conversions);
 
   return (
     <div className="space-y-4 mt-2">
+      <p className="text-[11px] text-white/65 drop-shadow">
+        Ads-snapshot · {ADS_SNAPSHOT_PERIOD} · live BigQuery overtager når daily-transfer'en har nok historik
+      </p>
+
       <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-4">
         {kpis.map((kpi) => (
           <KpiCard key={kpi.label} kpi={kpi} />
@@ -23,11 +51,11 @@ export default async function OversigtPage() {
 
       <div className="grid grid-cols-1 gap-3 lg:grid-cols-3">
         <GlassCard className="p-5 lg:col-span-2">
-          <SectionHeading className="text-base">Conversions over tid</SectionHeading>
+          <SectionHeading className="text-base">Conversions pr. kampagne</SectionHeading>
           <p className="text-[11px] text-white/72 drop-shadow mb-3">
-            Daglige conversions med change-log markører
+            9 måneders snapshot · paused kampagner vist med mat farve
           </p>
-          <ConversionsChart data={conversionsOverTime} />
+          <CampaignConversionsChart data={chartData} />
         </GlassCard>
 
         <GlassCard className="p-5">
