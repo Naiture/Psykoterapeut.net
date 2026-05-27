@@ -66,11 +66,30 @@ export interface Idea {
 
 export type AdviceTone = "observation" | "anbefaling" | "advarsel" | "mulighed";
 
+export type Evidence =
+  | {
+      kind: "stats";
+      items: { label: string; value: string; sub?: string; trend?: "up" | "down" | "flat" }[];
+    }
+  | {
+      kind: "sparkline";
+      label: string;
+      caption?: string;
+      data: { x: string; y: number }[];
+    }
+  | {
+      kind: "bars";
+      label: string;
+      unit?: string;
+      items: { label: string; value: number; highlight?: boolean }[];
+    };
+
 export interface Advice {
   id: string;
   tone: AdviceTone;
   headline: string;
   body: string;
+  evidence?: Evidence;
   actionTitle: string;
   actionDescription: string;
   estimatedImpact: "lav" | "medium" | "høj";

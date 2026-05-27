@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { GlassCard } from "@/components/glass-card";
+import { EvidenceView } from "@/components/evidence-view";
 import type { Advice } from "@/lib/types";
 
 const TONE_STYLES: Record<Advice["tone"], { label: string; color: string }> = {
@@ -73,6 +74,8 @@ export function AdviceCard({ advice }: { advice: Advice }) {
       <p className="text-[15px] leading-relaxed text-white/85 drop-shadow">
         {advice.body}
       </p>
+
+      {advice.evidence && <EvidenceView evidence={advice.evidence} />}
 
       <div className="rounded-xl border border-white/15 bg-white/5 p-4 space-y-1">
         <div className="text-[10px] uppercase tracking-wider text-[#ffd09a] drop-shadow">Anbefalet handling</div>
