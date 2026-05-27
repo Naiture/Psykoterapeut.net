@@ -13,3 +13,10 @@ themeforest-kjR9EXNk-mental-care-therapy-counseling-psychologist-wordpress-theme
 # Temporary/old files
 depression-page.html
 online-terapi-media.json
+
+# Dashboard (Next.js)
+dashboard/node_modules
+dashboard/.next
+dashboard/.env.local
+dashboard/.env*.local
+dashboard/next-env.d.ts
