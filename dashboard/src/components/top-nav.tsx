@@ -11,6 +11,7 @@ const TABS: { href: string; label: string }[] = [
   { href: "/raadgivning", label: "Rådgivning" },
   { href: "/kampagner", label: "Kampagner" },
   { href: "/sogeord", label: "Søgeord" },
+  { href: "/sogetermer", label: "Søgetermer" },
   { href: "/landingssider", label: "Landingssider" },
   { href: "/change-log", label: "Change log" },
   { href: "/ide-bank", label: "Idé-bank" },
