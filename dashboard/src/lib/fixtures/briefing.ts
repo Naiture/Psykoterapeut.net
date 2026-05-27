@@ -8,7 +8,7 @@ import type { Briefing } from "@/lib/types";
 export const currentBriefing: Briefing = {
   date: "2026-05-27",
   summary:
-    "Her er hvad jeg ser i de seneste 9 måneders Ads-data og GA4 YTD: Angst-kampagnen er kontoens motor (26 conversions, CPA 327 kr), Højbjerg leverer stille men solidt, og Stress og Online Terapi koster mere end de bidrager. På landingssiderne er der ét stort huller-i-bunden-problem: /terapi-mod-stress får flest sessions men konverterer 0,2%. Og så er der attribution: GA4 registrerer 21 Book Gratis Samtale YTD, mens Google Ads viser 0 conversions for samme periode — vi mister altså data på det vigtigste signal.",
+    "Her er hvad jeg ser i de seneste 9 måneders Ads-data og GA4 YTD: Angst-kampagnen er kontoens motor (26 conversions, CPA 327 kr), Højbjerg leverer stille men solidt, og Stress er pauset og bør formentlig blive det. Online Terapi er lige startet — den hører til en samtale, ikke en optimering. På landingssiderne er der ét stort huller-i-bunden-problem: /terapi-mod-stress får flest sessions men konverterer 0,2%. Og så er der attribution: GA4 registrerer 21 Book Gratis Samtale YTD, mens Google Ads viser 0 conversions for samme periode — vi mister altså data på det vigtigste signal.",
   insights: [
     {
       id: "advice-1",
@@ -80,23 +80,23 @@ export const currentBriefing: Briefing = {
     {
       id: "advice-4",
       tone: "mulighed",
-      headline: "Online Terapi har 47 impressions over 9 måneder — kampagnen er reelt inaktiv",
+      headline: "Online Terapi er lige startet — en samtale Inger Marie og Chris skal have først",
       body:
-        "Online Terapi-kampagnen står som aktiv med 30 kr dagligt budget, men har på 9 måneder kun fået 47 impressions og 7 klik. CTR er 14,9% (høj fordi tallene er små), men der er stort set ingen visning. Det er enten budstrategi der ikke får trækkraft (Maksimér antal konverteringer med 0 conversions giver lavt prioritering) eller for snævre keywords. To veje: (1) skift midlertidigt til Maksimér klik for at indlære algoritmen, eller (2) luk kampagnen og flyt budgettet til Angst. Givet at Højbjerg og Angst begge konverterer, er option 2 mest sandsynligt rigtigst.",
+        "Vigtig kontekst: Online Terapi-kampagnen er helt ny, så de 47 impressions/7 klik/0 conv vi ser i snapshot er ikke et signal om at den ikke virker — det er bare for tidligt at sige noget. Før vi går videre med budget, bud-strategi eller keyword-oprydning er der nogle valg I to skal tage stilling til. Det her er ikke en optimeringsopgave endnu, det er en strategi-snak. Mine forslag til hvad I skal igennem:\n\n• **Målgruppe og positionering** — Online terapi i Danmark er et mættet marked. Hvem vil Inger Marie ramme? Folk udenfor Østjylland der ikke kan komme til Højbjerg? Pendlere og småbørnsforældre der ikke har tid til transport? Danskere i udlandet (en lille, men loyal niche)? Det dikterer både keywords og landingsside-vinkel.\n\n• **Kapacitet og pris** — Hvor mange online-timer/uge vil Inger Marie tilbyde? Samme pris som fysisk, eller anderledes? Hvis online er en bi-praksis, skal annoncerne ikke konkurrere mod Angst og Højbjerg om budget.\n\n• **Landingssiden først** — /online-terapi har 16 sessions YTD og 0 conv. Den side skal stå stærkt inden vi sender betalt trafik ind. Ellers betaler vi for klik der bouncer. Det er sandsynligvis det første konkrete spor, før vi rører kampagnen.\n\n• **Læringsperiode** — Når I er klar: giv kampagnen 60-90 dage med Maksimér klik (ikke conv — der er ikke nok data til at træne algoritmen), og benchmark mod Højbjergs første 90 dage som realistisk reference.\n\nMin anbefaling lige nu: hold kampagnen aktiv på lavt budget mens samtalen tages, men hold den ikke ansvarlig for resultater endnu.",
       evidence: {
         kind: "stats",
         items: [
-          { label: "Impressions", value: "47", sub: "9 mdr", trend: "flat" },
+          { label: "Impressions", value: "47", sub: "siden start", trend: "flat" },
           { label: "Klik", value: "7", sub: "CTR 14,9%", trend: "flat" },
-          { label: "Conversions", value: "0", trend: "down" },
-          { label: "Spend", value: "219 kr" },
+          { label: "Landingsside-sessions", value: "16", sub: "YTD — 0 conv", trend: "flat" },
+          { label: "Status", value: "For tidligt", sub: "ingen valid CPA endnu" },
         ],
       },
-      actionTitle: "Luk Online Terapi-kampagnen og flyt 30 kr/dag til Angst",
-      actionDescription: "Arkivér i Google Ads. Tilføj note til change log. Hvis du vil bevare online-spor — start ny kampagne med Maksimér klik som test, ikke samme dag.",
-      estimatedImpact: "medium",
-      estimatedEffortHours: 0.5,
-      tags: ["kampagne", "ryd-op"],
+      actionTitle: "Book en strategi-samtale: målgruppe, kapacitet, pris, landingsside",
+      actionDescription: "Inger Marie + Chris. Fokus: hvem er online-klienten, hvor mange timer/uge, hvilken pris, og hvad skal /online-terapi-siden sige før vi pumper budget i. Ingen kampagne-ændringer før samtalen.",
+      estimatedImpact: "høj",
+      estimatedEffortHours: 1.5,
+      tags: ["strategi", "kampagne", "landing-page"],
     },
     {
       id: "advice-5",
