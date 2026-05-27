@@ -8,7 +8,7 @@ import type { Briefing } from "@/lib/types";
 export const currentBriefing: Briefing = {
   date: "2026-05-27",
   summary:
-    "Her er hvad jeg ser i de seneste 9 måneders Ads-data og GA4 YTD: Angst-kampagnen er kontoens motor (26 conversions, CPA 327 kr), Højbjerg leverer stille men solidt, og Stress er pauset og bør formentlig blive det. Online Terapi er lige startet — den hører til en samtale, ikke en optimering. På landingssiderne er der ét stort huller-i-bunden-problem: /terapi-mod-stress får flest sessions men konverterer 0,2%. Og så er der attribution: GA4 registrerer 21 Book Gratis Samtale YTD, mens Google Ads viser 0 conversions for samme periode — vi mister altså data på det vigtigste signal.",
+    "Her er hvad jeg ser i de seneste 9 måneders Ads-data og GA4 YTD: Angst-kampagnen er kontoens motor (26 conversions, CPA 327 kr), Højbjerg leverer stille men solidt, og Stress er pauset og bør formentlig blive det. Online Terapi er lige startet — den hører til en samtale, ikke en optimering. På landingssiderne er der ét stort huller-i-bunden-problem: /terapi-mod-stress får flest sessions men konverterer 0,2%. Og på budstrategi-fronten: vi har nu nok conversions (37 over 9 mdr) til endelig at sætte Mål-CPA på Angst og styre algoritmen i stedet for at lade den jagte.",
   insights: [
     {
       id: "advice-1",
@@ -58,24 +58,26 @@ export const currentBriefing: Briefing = {
     },
     {
       id: "advice-3",
-      tone: "advarsel",
-      headline: "Ads-konto viser 0 conversions — GA4 viser 21 Book Gratis Samtale",
+      tone: "anbefaling",
+      headline: "Vi har nu nok data til Mål-CPA — Ads foreslår det selv",
       body:
-        "Det her er det vigtigste på listen, selvom det ikke ser flot ud. GA4 har registreret 21 Book Gratis Samtale events og 13 Click Phone Number events YTD — det er reelle kunde-handlinger. Men Google Ads BigQuery-eksporten viser 0 conversions for samme periode, fordi Ads conversion tracking blev sat op meget sent. Det betyder at hver eneste beslutning vi tager på CPA og 'maksimér conversions'-budstrategi er truffet på blind data. Indtil tracking er fixet, kan vi ikke stole på CPA-tallene i Ads.",
+        "Med 37 conversions over 9 måneder (19 kontakter + 18 formular-indsendelser) har vi endelig nok data til at sætte en realistisk Mål-CPA. Google Ads viser også en aktiv notifikation om at angive Mål-CPA for én af budstrategierne. Account-CPA ligger på 492 kr i snit, men spændet er stort: Angst på 327 kr, Højbjerg på 607 kr, Stress på 1.534 kr (paused). Den fornuftige bevægelse er at sætte Mål-CPA på Angst først — fx 400 kr som loft. Det giver algoritmen et klart styresignal og forhindrer at den jagter trafik der koster mere end den må. Højbjerg er sværere — skal man sætte 600 eller 500 og acceptere lavere volumen? Værd at teste én ad gangen.",
       evidence: {
-        kind: "stats",
+        kind: "bars",
+        label: "CPA pr. kampagne (9 mdr)",
+        unit: "kr",
         items: [
-          { label: "GA4 Book Gratis Samtale", value: "21", sub: "YTD 2026", trend: "up" },
-          { label: "GA4 Click Phone Number", value: "13", sub: "YTD 2026", trend: "up" },
-          { label: "Ads-rapporterede conv", value: "0", sub: "samme periode", trend: "down" },
-          { label: "Risiko", value: "Høj", sub: "Smart bidding kører blind" },
+          { label: "Angst", value: 327, highlight: true },
+          { label: "Højbjerg", value: 607 },
+          { label: "Konto-snit", value: 492 },
+          { label: "Stress (paused)", value: 1534 },
         ],
       },
-      actionTitle: "Verificér Google Ads conversion tracking og import af GA4-key-events",
-      actionDescription: "Tjek at Book_Gratis_Samtale, Click Phone Number og Click Mail Links er importeret som conversions. Bekræft i Ads UI at conversion-kolonnen begynder at tælle.",
-      estimatedImpact: "høj",
-      estimatedEffortHours: 1,
-      tags: ["tracking", "kampagne"],
+      actionTitle: "Sæt Mål-CPA = 400 kr på Angst-kampagnen som første test",
+      actionDescription: "Skift fra 'Maksimér antal konverteringer' til 'Mål-CPA 400 kr'. Kør i 30 dage. Hvis volumen falder >25% uden CPA-fald — gå tilbage. Højbjerg vurderes separat når Angst-resultatet er ind.",
+      estimatedImpact: "medium",
+      estimatedEffortHours: 0.5,
+      tags: ["kampagne", "budstrategi"],
     },
     {
       id: "advice-4",
