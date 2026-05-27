@@ -1,6 +1,7 @@
 import { GlassCard } from "@/components/glass-card";
 import { AdviceCard } from "@/components/advice-card";
 import { currentBriefing } from "@/lib/fixtures/briefing";
+import { ADS_SNAPSHOT_PERIOD } from "@/lib/ads/snapshot";
 
 export default function RaadgivningPage() {
   const briefingDate = new Date(currentBriefing.date).toLocaleDateString("da-DK", {
@@ -14,7 +15,7 @@ export default function RaadgivningPage() {
     <div className="mx-auto max-w-3xl space-y-6 mt-4">
       <GlassCard className="p-8 space-y-4">
         <div className="text-[11px] uppercase tracking-[0.15em] text-[#ffd09a] drop-shadow">
-          Briefing · {briefingDate}
+          Briefing · {briefingDate} · Ads-data {ADS_SNAPSHOT_PERIOD}
         </div>
         <h1 className="font-serif text-3xl text-white drop-shadow-[0_2px_14px_rgba(0,0,0,0.6)] leading-tight">
           Hvad jeg ville bruge denne uge på
