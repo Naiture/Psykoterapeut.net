@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 
 const TABS: { href: string; label: string }[] = [
   { href: "/", label: "Oversigt" },
+  { href: "/raadgivning", label: "Rådgivning" },
   { href: "/kampagner", label: "Kampagner" },
   { href: "/sogeord", label: "Søgeord" },
   { href: "/landingssider", label: "Landingssider" },

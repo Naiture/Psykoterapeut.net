@@ -64,6 +64,26 @@ export interface Idea {
   tags: string[];
 }
 
+export type AdviceTone = "observation" | "anbefaling" | "advarsel" | "mulighed";
+
+export interface Advice {
+  id: string;
+  tone: AdviceTone;
+  headline: string;
+  body: string;
+  actionTitle: string;
+  actionDescription: string;
+  estimatedImpact: "lav" | "medium" | "høj";
+  estimatedEffortHours: number;
+  tags: string[];
+}
+
+export interface Briefing {
+  date: string;
+  summary: string;
+  insights: Advice[];
+}
+
 export type ExperimentStatus = "planlagt" | "kører" | "afsluttet";
 
 export interface Experiment {
