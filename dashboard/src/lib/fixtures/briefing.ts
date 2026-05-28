@@ -124,5 +124,30 @@ export const currentBriefing: Briefing = {
       estimatedEffortHours: 2,
       tags: ["kampagne", "landing-page"],
     },
+    {
+      id: "advice-6",
+      tone: "anbefaling",
+      headline: "Online-vinkel fundet: ram dem der vil have terapi uden fysisk fremmøde",
+      body:
+        "Det her er svaret på online-samtalen (jf. ovenfor). I stedet for at jagte ordet \"online terapi\" — som næsten ingen søger på, og som er kontoens DYRESTE klik (52,86 kr) — vender vi det om: vi køber de billige angst-klik (5–13 kr) og lader annoncen TYDELIGT sige \"online\". Så filtrerer annoncen selv: de der vil møde fysisk klikker ikke (gratis for os, vi betaler kun pr. klik), og vi fanger det segment der vil have terapi men ikke fysisk fremmøde. Det passer bedst til netop angst — især social angst og panikangst, hvor det at slippe for at tage hjemmefra ikke er en feature, men hele pointen. Bonus: online = hele Danmark, ikke kun Aarhus. Start med angst (det eneste der beviseligt konverterer), og replikér strukturen til stress/depression/traume når vinklen er bekræftet.",
+      evidence: {
+        kind: "bars",
+        label: "Pris pr. klik: angst-ord (billige) vs online-ord (dyre)",
+        unit: "kr",
+        items: [
+          { label: "hjælp til stress og angst", value: 5.43, highlight: true },
+          { label: "angst behandling", value: 12.59 },
+          { label: "angst terapi", value: 18.23 },
+          { label: "online psykoterapi", value: 22.26 },
+          { label: "online terapi", value: 52.86 },
+        ],
+      },
+      actionTitle: "Opret kampagne \"Online Terapi – Angst\" (hele DK), mål = Book Gratis Samtale",
+      actionDescription:
+        "Frasematch-søgeord: \"angst behandling\", \"hjælp til angst\", \"angst terapi\", \"social angst\", \"panikangst\" m.fl. Annoncer der råber \"online/hjemmefra\". Negativer: test, medicin, gratis, henvisning. Se fuld plan på idé-kortet i Idé-banken.",
+      estimatedImpact: "høj",
+      estimatedEffortHours: 4,
+      tags: ["kampagne", "online", "angst"],
+    },
   ],
 };
