@@ -24,3 +24,4 @@ dashboard/next-env.d.ts
 # Superpowers brainstorm sessions
 .superpowers/
 .vercel
+.claude/skills/keyword-research/lab/.venv/
