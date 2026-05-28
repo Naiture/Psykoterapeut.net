@@ -25,3 +25,4 @@ dashboard/next-env.d.ts
 .superpowers/
 .vercel
 .claude/skills/keyword-research/lab/.venv/
+.claude/skills/keyword-research/lab/**/__pycache__/
