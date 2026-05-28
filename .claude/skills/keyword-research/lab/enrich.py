@@ -39,7 +39,9 @@ def _attach(row, agg):
 
 def enrich_keyword(row, exact_stats, search_terms):
     kw_lower = row["keyword"].strip().lower()
-    exact = exact_stats.get(kw_lower)
+    # Normalisér nøgler til lowercase så match virker uanset casing i exact_stats
+    exact_lower = {k.lower(): v for k, v in exact_stats.items()}
+    exact = exact_lower.get(kw_lower)
     if exact and (exact.get("klik", 0) or 0) > 0:
         return _attach(row, aggregate_performance([{
             "impressions": exact.get("impressions", 0), "klik": exact.get("klik", 0),

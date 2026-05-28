@@ -1,5 +1,6 @@
 """BigQuery-først scoring: bevist (ægte data) vs estimat (Keyword Planner). 0-100."""
 
+# OBS: substring-match — fx 'barn' rammer også 'barndomstraume'
 DEFAULT_DISQUALIFIERS = (
     "henvisning", "ydernummer", "psykiater", "psykiatri",
     "barn", "børn", "boern", "misbrug", "alkohol", "stof",

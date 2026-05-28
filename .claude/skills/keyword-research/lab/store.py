@@ -2,7 +2,7 @@
 import json
 from pathlib import Path
 
-# Metrics-felter der opdateres ved merge (status + noter bevares altid)
+# status, noter og gruppe er bevidst udeladt — de bevares på tværs af merges
 _UPDATE_FIELDS = ("volume", "competition", "cpc_low", "cpc_high", "score", "intent",
                   "kilde", "klik", "conv", "cpa", "cpc_faktisk")
 

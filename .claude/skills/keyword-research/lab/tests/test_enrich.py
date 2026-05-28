@@ -58,6 +58,16 @@ def test_enrich_marks_net_new_when_no_data():
     assert "klik" not in enriched
 
 
+def test_enrich_exact_match_case_insensitive():
+    """exact_stats med mixed-case nøgle skal matche lowercase keyword."""
+    row = {"keyword": "online terapi", "volume": 800, "competition": "low",
+           "cpc_low": 10.0, "cpc_high": 25.0}
+    exact = {"Online Terapi": {"impressions": 400, "klik": 15, "cost": 300.0, "conv": 3}}
+    enriched = enrich_keyword(row, exact, search_terms=[])
+    assert enriched["kilde"] == "bigquery"
+    assert enriched["klik"] == 15
+
+
 def test_enrich_all_processes_list():
     rows = [
         {"keyword": "online terapi", "volume": 1300, "competition": "low", "cpc_low": 12.0, "cpc_high": 28.0},

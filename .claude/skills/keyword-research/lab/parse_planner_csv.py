@@ -14,6 +14,7 @@ def _to_int(value):
 
 
 def _to_float(value):
+    # Danske Keyword Planner-eksporter bruger komma som decimaltegn (fx "12,50")
     if not value:
         return 0.0
     if "," in value:
