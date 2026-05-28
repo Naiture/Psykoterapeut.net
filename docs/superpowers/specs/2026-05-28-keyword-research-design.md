@@ -18,26 +18,47 @@ Researchede søgeord, daterede snapshots og akkumuleret viden gemmes som **filer
 så laboratoriet bygger en voksende videnbase om hvilke søgeord der virker, er for dyre, eller
 er afvist — og hvordan både markeds-efterspørgsel og faktisk performance bevæger sig over tid.
 
+## Grundprincip: BigQuery er benchmarken
+
+Al faktisk Google Ads-performance ligger allerede i BigQuery. Det er sandheden — hvad vi
+faktisk har betalt og konverteret — og det vægter højere end Keyword Planners *estimater*.
+
+- **Har et keyword (eller en matchende søgeterm) data i BigQuery** → vi benchmarker på ægte
+  CPA/conv/CPC. Ingen manuel test nødvendig; vi *ved* om det er billigt + godt.
+- **Net-nyt keyword uden data** → scores på Keyword Planner-estimat og markeres som
+  "net-ny satsning". Kun disse er kandidater til **manuel** test i Ads-UI.
+
+Broad match betyder at `ads_SearchQueryStats` indeholder masser af rigtige søgninger vi ikke
+engang byder på — guld til at benchmarke kandidat-keywords uden at røre kampagnen.
+
 ## Laboratoriets løkke
 
 ```
-  ┌─────────────┐      ┌──────────┐      ┌─────────────┐      ┌──────────────┐
-  │ 1. DISCOVER │ ───► │ 2. TEST  │ ───► │ 3. MONITORÉR │ ───► │ 4. ANBEFAL   │
-  │  research   │      │ (manuelt │      │  volumen +   │      │ skalér/pause/│
-  │  + scoring  │      │  i Ads)  │      │  performance │      │  negative    │
-  └─────────────┘      └──────────┘      └─────────────┘      └──────┬───────┘
-        ▲                                                            │
-        └────────────────────  ny research-runde  ◄──────────────────┘
+  ┌──────────────┐     ┌──────────────┐     ┌──────────────┐     ┌──────────────┐
+  │ 1. DISCOVER  │ ──► │ 2. BENCHMARK │ ──► │ 3. HANDL      │ ──► │ 4. MONITORÉR │
+  │  seeds +     │     │  berig mod    │     │ bevist:skalér/│     │  volumen +   │
+  │  Keyword Pl. │     │  BigQuery     │     │ pause/negative│     │  performance │
+  │  (net-nye)   │     │  + scoring    │     │ net-ny:test   │     │  over tid    │
+  └──────────────┘     └──────────────┘     └──────┬───────┘     └──────┬───────┘
+        ▲                                          │                    │
+        └──────────  ny research-runde  ◄──────────┴────────────────────┘
 ```
+
+Bevist (har BigQuery-data) → direkte anbefaling. Net-ny (kun estimat) → valgfri manuel test
+i Ads-UI, hvorefter den får data og indgår i benchmark ved næste kørsel.
 
 ## Scope
 
 **I scope (fuldt laboratorium):**
 - Seed-generering fra domæne-viden + rigtige søgetermer + eksisterende keywords
 - Browser-drevet (superviseret) opslag i Keyword Planner → CSV-download → parse
-- "Billig + god"-scoring af keywords
+- **Berigelse mod BigQuery:** match hvert kandidat-keyword mod ægte performance
+  (eksakt keyword i `ads_KeywordStats` + matchende søgetermer i `ads_SearchQueryStats`)
+- **BigQuery-først "billig + god"-scoring:** bevist score på ægte CPA/conv/CPC når data findes,
+  ellers estimat-score fra Keyword Planner + flag som "net-ny satsning"
 - Lagring af keywords + daterede snapshots + viden i `keyword-research/`
-- Prioriteret shortlist + test-plan (ad groups, match types, negatives) som output
+- Output delt i **bevist** (direkte anbefaling) vs **net-ny** (valgfri manuel test-plan:
+  ad groups, match types, negatives)
 - **Monitorering** af keywords vi kører på:
   - Markeds-søgevolumen fra Keyword Planner over tid (browser, superviseret)
   - Faktisk annonce-performance fra BigQuery (impressions, klik, CPC, conv, CPA)
@@ -46,7 +67,8 @@ er afvist — og hvordan både markeds-efterspørgsel og faktisk performance bev
 
 **Ikke i scope (bevidst fravalgt nu, men muliggjort):**
 - At sætte keywords i drift programmatisk — sker manuelt i Ads-UI (LPA-pluginet rører
-  ikke kampagner). Laboratoriet leverer test-planen og registrerer status.
+  ikke kampagner). Laboratoriet leverer test-planen for **net-nye** keywords og registrerer
+  status. For keywords der allerede har BigQuery-data er manuel test unødvendig.
 - Planlagt/automatisk kørsel — kører **on-demand** nu ("opdatér laboratoriet"). Datamodellen
   gemmer daterede snapshots, så en planlagt kørsel (cron/`schedule`) kan tilføjes senere uden
   omskrivning. Browser-delen er superviseret, så fuld automatik kræver alligevel Chris med.
@@ -79,14 +101,24 @@ Claude in Chrome styrer Chris' indloggede Google Ads → Keyword Planner:
 Superviseret = Claude udfører flowet, Chris kigger med og griber ind ved 2FA, captcha eller
 layout-ændringer i Google Ads-UI'et.
 
-### 3. Scoring — "billig + god"
-Gennemsigtig score pr. keyword, der kombinerer:
-- **Høj volumen** (avg. månedlige søgninger)
-- **Lav CPC** (top-of-page bid low/high som proxy)
-- **Lav/mellem konkurrence**
-- **Høj intent-fit** (terapi-/booking-intent vægter højere end symptom-søgning)
+### 2b. Berigelse mod BigQuery
+For hvert kandidat-keyword, hent ægte performance fra BigQuery:
+- **Eksakt match** i `ads_KeywordStats_2169223464` (hvis vi byder på det)
+- **Matchende søgetermer** i `ads_SearchQueryStats_2169223464` — en søgeterm matcher hvis alle
+  keyword'ets ord optræder i søgetermen; aggregér deres impressions/klik/cost/conv
 
-Bruger `google-ads` domæne-viden til at:
+Sæt `kilde = "bigquery"` + ægte felter (klik, conv, cpa, cpc_faktisk) hvis data findes,
+ellers `kilde = "estimat"` (net-ny satsning).
+
+### 3. Scoring — BigQuery-først "billig + god"
+Gennemsigtig score 0-100 pr. keyword. **Bevist score** (når BigQuery-data findes) vægter ægte
+økonomi; **estimat-score** (net-ny) bruger Keyword Planner.
+
+- **Bevist** (`kilde = "bigquery"`): ægte CPA (konverterer billigt = kongen), ægte CPC,
+  ægte efterspørgsel (klik). Klik uden conv → lav score (negative-kandidat).
+- **Estimat** (`kilde = "estimat"`): Keyword Planner-volumen + CPC-interval + konkurrence + intent.
+
+Begge bruger `google-ads` domæne-viden til at:
 - Ekskludere disqualifiers: "med henvisning", "ydernummer", psykiater, børn, misbrug, akut/selvmord
 - Markere national vs. lokal relevans: for online terapi er by-modifiers (fx "psykolog horsens")
   **ikke** automatisk negative — hele DK er potentielle online-klienter
@@ -109,9 +141,12 @@ Sammenlign nyeste snapshot mod forrige (volumen) og denne periode mod forrige (p
 - Flag pludselige skift.
 
 ### 5. Anbefalinger (output)
-**Efter research (trin 1-3):** prioriteret tabel af top-kandidater + test-plan
-(ad group-gruppering, match types — PHRASE/EXACT på commercial intent, BROAD kun med strenge
-negatives — og negative keyword-kandidater). Chris tager det manuelt ind i Ads-UI.
+**Efter research + benchmark (trin 1-3):** output delt i to:
+- **Bevist (BigQuery-data):** prioriteret tabel med ægte CPA/conv/CPC + direkte handling
+  (skalér op, hold, pause, gør til negative). Ingen manuel test nødvendig.
+- **Net-nye satsninger (kun estimat):** prioriteret tabel + test-plan (ad group-gruppering,
+  match types — PHRASE/EXACT på commercial intent, BROAD kun med strenge negatives —
+  og negative keyword-kandidater). Chris vælger hvilke der testes manuelt i Ads-UI.
 
 **Efter monitorering (trin 4):** handlings-anbefalinger pr. aktivt keyword:
 - **Skalér op** — performer godt + stabil/stigende efterspørgsel
@@ -122,7 +157,9 @@ negatives — og negative keyword-kandidater). Chris tager det manuelt ind i Ads
 ## Datamodel & lagring (`keyword-research/`)
 
 - **`keywords.json`** — aktuel tilstand pr. keyword (kilde til sandhed):
-  `keyword, gruppe, intent, volumen, konkurrence, cpc_low, cpc_high, score, status, noter, dato`
+  `keyword, gruppe, intent, volumen, konkurrence, cpc_low, cpc_high, score, kilde, status, noter, dato`
+  + ægte performance når `kilde = "bigquery"`: `klik, conv, cpa, cpc_faktisk`
+  - `kilde` ∈ {`bigquery` (bevist), `estimat` (net-ny)}
   - `status` ∈ {`kandidat`, `test`, `live`, `afvist`}
 - **`snapshots/YYYY-MM-DD.json`** — dateret snapshot pr. monitorerings-kørsel:
   søgevolumen + CPC pr. aktivt keyword (markeds-data fra Keyword Planner) + nøgle-performance
