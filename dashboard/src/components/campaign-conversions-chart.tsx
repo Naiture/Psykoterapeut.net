@@ -39,8 +39,8 @@ export function CampaignConversionsChart({ data }: Props) {
               fontSize: 12,
               color: "white",
             }}
-            formatter={(value: number, _name, ctx) => {
-              const cpa = (ctx.payload as CampaignBar).cpa;
+            formatter={(value, _name, ctx) => {
+              const cpa = (ctx?.payload as CampaignBar | undefined)?.cpa ?? 0;
               return [`${value} conv · CPA ${cpa > 0 ? Math.round(cpa) + " kr" : "—"}`, ""];
             }}
           />
