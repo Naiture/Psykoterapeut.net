@@ -26,4 +26,29 @@ export const ideas: Idea[] = [
     impact: "høj",
     tags: ["Konvertering", "Mobil", "UX", "Elementor"],
   },
+  {
+    id: "online-terapi-naevn-lidelser-top",
+    title: "Nævn angst, depression m.fl. højt oppe på /online-terapi",
+    description:
+      "Når man søger på \"angst\" og lander på online-kampagnesiden, står der intet om angst nogen steder. Det er et message match-problem: det er netop angst-søgeordene der kører i Online Terapi-kampagnen nu, men siden bekræfter ikke at man er landet rigtigt. " +
+      "Skriv i toppen (eller højt oppe) noget om \"hjælp til angst, depression og andre lidelser\" så søgningen genkendes med det samme. " +
+      "Dobbelt gevinst: (1) bedre Quality Score i Google Ads → billigere klik, (2) brugeren føler sig set og hopper ikke af. Hænger direkte sammen med det lave konverteringstal (129 klik → ~1 målt henvendelse).",
+    status: "idé",
+    proposedBy: "Inger Marie",
+    effortHours: 3,
+    impact: "høj",
+    tags: ["Landingsside", "Angst", "Quality Score", "Konvertering"],
+  },
+  {
+    id: "online-terapi-ring-mail-cta",
+    title: "Ring/mail-CTA øverst på /online-terapi",
+    description:
+      "Tilføj tydelige \"Ring\"- og \"Skriv/mail\"-knapper øverst på /online-terapi, så besøgende kan tage kontakt med det samme uden at scrolle. Kopiér mønstret fra /book-samtale. " +
+      "Vigtigt fordi siden er kampagnens landingsside og lige nu ikke har en oplagt kontakt-vej i toppen — endnu en sandsynlig årsag til det lave konverteringstal. Beslægtet med mobil-kontaktknap-idéen.",
+    status: "idé",
+    proposedBy: "Chris",
+    effortHours: 2,
+    impact: "høj",
+    tags: ["Konvertering", "CTA", "Online Terapi", "Elementor"],
+  },
 ];
