@@ -14,4 +14,16 @@ export const ideas: Idea[] = [
     impact: "høj",
     tags: ["Google Ads", "Angst", "Online", "Ny kampagne"],
   },
+  {
+    id: "mobil-kontaktknap-menu",
+    title: "Kontakt-knap i mobil-menuen (øverst)",
+    description:
+      "Mobil er den mest besøgte version af sitet, men der er ingen kontakt-/ring-knap i toppen af menuen — man skal lede for at finde vej til kontakt. Tilføj en tydelig kontakt-/ring-knap direkte i mobil-headeren/menuen, så besøgende kan ringe eller skrive med ét tryk. " +
+      "Hænger sammen med det lave konverteringstal vi så i analysen (129 betalte klik → ~1 målt henvendelse på 28 dage): hvis vejen til kontakt ikke er oplagt øverst på mobil, taber vi leads præcis dér. Skal ind i Elementor Pro Theme Builder-headeren (mobil-breakpoint). Beslægtet med CTA-knapper øverst på /online-terapi.",
+    status: "idé",
+    proposedBy: "Chris",
+    effortHours: 2,
+    impact: "høj",
+    tags: ["Konvertering", "Mobil", "UX", "Elementor"],
+  },
 ];
